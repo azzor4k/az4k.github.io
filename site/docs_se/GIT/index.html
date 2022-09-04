@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
-<link href="https://azzor4k.github.io/docs/docs_se/GIT/" rel="canonical"/>
+<link href="https://azzor4k.github.io/technical/docs_se/GIT/" rel="canonical"/>
 <meta content="Tài liệu tự overview lại!" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -69,7 +69,7 @@
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/technical/" title="aZ4k Docs">
 <i class="md-icon"></i>
 </a>
 </div>
@@ -145,7 +145,7 @@
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title md-nav__title--site" for="__drawer">
-<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/technical/" title="aZ4k Docs">
 <i class="md-icon"></i>
 </a>
     aZ4k Docs
@@ -410,13 +410,13 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 <li>Hệ thống quản lí phiên bảo bao gồm: Cục bộ, tập trung, phân tán.</li>
 </ul>
 <h3 id="he-thong-quan-li-phien-ban-cuc-bo"><strong>Hệ thống quản lí phiên bản cục bộ</strong></h3>
-<p><img alt="GitHub Logo" src="/images/PBCB.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/PBCB.png"/></p>
 <p>Hệ thống quản lí phiên bản VCS cục bộ có chứa một database đơn giản lưu trữ tất cả các sự thay đổi của các file dưới sự kiểm soát thay đổi.  </p>
 <h3 id="he-thong-quan-li-phien-ban-tap-trung"><strong>Hệ thống quản lí phiên bản tập trung</strong></h3>
-<p><img alt="GitHub Logo" src="/images/PBTT.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/PBTT.png"/></p>
 <p>Hệ thống quản lí phiên bản tập trung (Centralized Version Control Systems - CVCSs). Mô hình bao gồm một máy chủ chứa tất cả các file đã được phiên bản hóa và danh sách các người dùng có quyền thay đổi file này trên máy chủ trung tâm đó.</p>
 <h3 id="he-thong-quan-li-phien-ban-phan-tan"><strong>Hệ thống quản lí phiên bản phân tán</strong></h3>
-<p><img alt="GitHub Logo" src="/images/PBPT.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/PBPT.png"/></p>
 <p>Hệ Thống Quản Lý Phiên Bản Phân Tán (Distributed Version Control Systems - DVCSs). Mô hình này người dùng  không chí "check out" (sao chép về cục bộ) phiên bản mới nhất của các tập tin: mirror, repository. Chính vì vậy nếu một máy chủ nào mà hệ thống quản lý phiên bản phân tán ngừng hoạt động thì kho chứa bất kì máy client nào cũng có thể sao chép ngược trở lại máy chủ để khôi phục lại toàn bộ hệ thống. Mỗi checkout thực sự là một bản sao đầy đủ cho tất cả dữ liệu.  </p>
 <h2 id="co-ban-ve-git">Cơ bản về Git</h2>
 <ul>
@@ -425,11 +425,11 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 <li>Sự khác nhau cơ bản giữa Git và VCS.</li>
 <li>
 <p>Về mặt lý thuyết, phần lớn hệ thống khác lưu trữ thông tin dưới dạng danh sách các tập tin được thay đổi. Các hệ thống này coi thông tin được lưu trữ như là một tập hợp các tập tin và các thay đổi được thực hiện trên mỗi tập tin theo thời gian, được minh họa theo hình sau: 
-    <img alt="GitHub Logo" src="/images/1.4.png"/></p>
+    <img alt="GitHub Logo" src="/technical/images/1.4.png"/></p>
 </li>
 <li>
 <p>Git không nghĩ và xử lý theo cách này. Mà thay đó Git coi dữ liệu của nó giống như một tập hợp các ảnh (snapshot) của một hệ thống file nhỏ. Về cơ bản Git chụp lại một snapshot ghi lại nội dung của tất cả nội dung tập tin tại thời điểm đó và tạo ra một tham chiếu tới ảnh đó. Nếu không có sự thay đổi nào, Git không lưu trữ tập tin đó lại một lần nữa mà chỉ tạo một liên kết tới tập tin gốc đã tồn tại trước đó. Thao tác như hình sau:
-  <img alt="GitHub Logo" src="/images/1.5.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.5.png"/></p>
 </li>
 <li>
 <p>Mỗi tập tin trong Git được quản lí dựa trên ba trạng thái: committed, modified và staged.</p>
@@ -441,7 +441,7 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 </li>
 <li>
 <p>Tạo ra sử riêng biệt của 1 dự án sử dụng Git: Git directory(thư mục Git), staging area (khu vực tổ chức), working directory (thư mục làm việc).
-  <img alt="GitHub Logo" src="/images/1.6.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.6.png"/></p>
 </li>
 <li>Thư mục Git: là nơi Git lưu trử các metadata và database cho dự án.</li>
 <li>Thư mục làm việc: là bản sao một phiên bản của dự án. Những tập tin được pull từ database được nén lại trong thư mục Git.</li>
@@ -450,7 +450,7 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 </li>
 <li>
 <p>Tiến trình công việc (workflow) cơ bản cũa Git:
-  <img alt="GitHub Logo" src="/images/1.7.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.7.png"/></p>
 </li>
 <li>Bạn thay đổi các tập tin trong thư mục làm việc.</li>
 <li>Bạn tổ chức tập tin, tạo mới ảnh của tập tin đó vào khu vực tổ chức.</li>
@@ -465,18 +465,18 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 <li>Sau đó Git tạo một đối tượng <code>commit</code>  có chứa các metedata và một con trỏ tới đối tượng <code>tree</code> gốc .</li>
 <li>
 <p>Kho chứa Git bây giờ có 5 đối tượng : 3 blob cho nội dung tương ứng của từng tập tin, một tree liệt kê nội dung của thư mục và chỉ rỏ tên tập tin nào được lưu trữ trong blob nào, và một commit có con trỏ tới tree gốc và tất cả thông tin mô tả commit. Theo hình sau dữ liệu kho chứa Git:
-  <img alt="GitHub Logo" src="/images/1.8.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.8.png"/></p>
 </li>
 <li>
 <p>Khi thực hiện một số thay đổi và commit lại thì commit tiếp theo sẽ lưu một con trỏ tới commit ngay trước nó. Sau hai commit , lịch sữ dự án sẽ tương tự như hình sau: 
-  <img alt="GitHub Logo" src="/images/1.9.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.9.png"/></p>
 </li>
 <li>
 <p>Một nhánh trong Git đơn thuần là một con trỏ có khả năng di chuyển được qua những commit.</p>
 </li>
 <li>
 <p>Tên nhánh mặc định của Git là master. Commit đầu tiên chúng đều được trỏ tới nhánh <code>master</code> . Và mỗi lần thực hiện commit nó sẽ tự động ghi và theo hướng tiến lên như hình sau: 
-  <img alt="GitHub Logo" src="/images/1.10.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.10.png"/></p>
 </li>
 <li>
 <p>Tạo một nhánh mới. Tạo ra một con trỏ mới cho phép di chuyển vòng quanh. Ví dụ tạo nhánh tên <code>testing</code>
@@ -485,24 +485,24 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 </li>
 <li>
 <p>Nó sẽ tạo một con trỏ mới , cùng trỏ tới commit hiện tại như hình sau:
-  <img alt="GitHub Logo" src="/images/1.11.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.11.png"/></p>
 </li>
 <li>
 <p>Làm sao Git biết đang làm việc trên nhánh nào? Git giữ một con trỏ đặc biệt có tên <code>HEAD</code>. Trong Git đây là con trỏ tới nhánh nội bộ hiện đang làm việc. Như hình sau thì Git vẫn trỏ tới nhánh master:</p>
 </li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/1.12.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/1.12.png"/></p>
 <ul>
 <li>Để chuyển sang một nhánh đang tồn tại, sử dụng lệnh <code>git checkout</code>. Chuyển sang nhánh testing mới:
 <div class="highlight"><pre><span></span><code>$ git checkout testing
 </code></pre></div></li>
 <li>
 <p>Lệnh này sẽ chuyển con trỏ HEAD sang nhánh testing như hình sau:
-  <img alt="GitHub Logo" src="/images/1.13.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.13.png"/></p>
 </li>
 <li>
 <p>Ý nghĩa của việc tạo nhánh mới là gì? Thử tạo một commit khác. Kết quả sau khi thực hiện:
-  <img alt="GitHub Logo" src="/images/1.14.png"/></p>
+  <img alt="GitHub Logo" src="/technical/images/1.14.png"/></p>
 </li>
 <li>
 <p>Nhánh mà HEAD trỏ tới di chuyển tiến lên phía trước theo commit. Thử chuyển lại nhánh Master
@@ -511,14 +511,14 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 </li>
 <li>
 <p>HEAD sẽ chuyển sang nhánh khác khi checkout, như hình sau:
- <img alt="GitHub Logo" src="/images/1.15.png"/></p>
+ <img alt="GitHub Logo" src="/technical/images/1.15.png"/></p>
 </li>
 <li>
 <p>Lệnh này di chuyển lại con trỏ về  nhánh <code>master</code> và sau đó phục hồi lại tập tin trong thư mục làm việc trở lại snapshot mà <code>master</code> trỏ tới. Và điều này có nghĩa là các thay đổi thực hiện từ thời điểm này trở đi sẽ tách ra so với phiên bản củ hơn của dự án.</p>
 </li>
 <li>
 <p>Hãy thử tạo ra một vài thay đổi và commit lại một lần nữa và kết quả như hình sau:
- <img alt="GitHub Logo" src="/images/1.16.png"/></p>
+ <img alt="GitHub Logo" src="/technical/images/1.16.png"/></p>
 </li>
 </ul>
 <p>Lịch sử các nhánh đã bị phân tách. </p>
@@ -526,18 +526,18 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 <ul>
 <li>Đầu tiên đang làm việc trên một dự án có một số commit từ trước như hình sau:</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/2.1.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/2.1.png"/></p>
 <ul>
 <li>Để tạo một nhánh tên iss53 và chuyển sang nhánh đó đồng thời, bạn có thể chạy lệnh <code>git checkout</code> với tham số -b:
  <div class="highlight"><pre><span></span><code>$ git checkout -b iss53
 </code></pre></div></li>
 <li>Kết quả được như hình sau:</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/2.2.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/2.2.png"/></p>
 <ul>
 <li>Tiếp tục thực hiện một số commit trên đó. Làm cho nhánh <code>iss53</code> di chuyển tiến lên(Vì hiện tại HEAD đang trỏ tới nó) như hình sau:</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/2.3.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/2.3.png"/></p>
 <ul>
 <li>Nếu nhận ra có vấn đề cần khắc phục nó ngay lập tức. Với Git chỉ cần chuyển về lại nhánh <code>master</code>
 <div class="highlight"><pre><span></span><code>$ git checkout master
@@ -552,7 +552,7 @@ Xem lại các thay đổi đã được thực hiện theo thời gian, ngườ
 </li>
 <li>Tiến hành tạo commit tiếp theo đã fix lỗi thành công trên <code>hotfix</code> và kết quả như hình sau:</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/2.4.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/2.4.png"/></p>
 <ul>
 <li>Sau khi chắc chắc rằng bản vá lỗi hoạt động đúng theo ý muốn, thì sau đó nên tích hợp nó lại nhánh chính để triển khai. Sử dụng lệnh <code>git merge</code> để làm việc này: 
 <div class="highlight"><pre><span></span><code>$ git checkout master
@@ -561,7 +561,7 @@ $ git merge hotfix
 <li>Kết quả sẽ hiện thỉ cụm từ <code>Fast forward</code> trong lần tích hợp đó. Git sẽ đơn giản hóa bằng cách di chuyển con trỏ về phía trước vì không có sự rẻ nhánh nào để tích hợp.</li>
 <li>Thay đổi của bạn bây giờ ở trong snapshot của commit được trỏ tới bởi nhánh <code>master</code> và có triển khai thay đổi này như hình sau:</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/2.5.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/2.5.png"/></p>
 <ul>
 <li>
 <p>Sau triển khai này có thể xóa nhánh <code>hotfix</code> đi vì nhánh <code>master</code> cùng trỏ tới một điểm và không cần nhánh đó nữa:
@@ -575,7 +575,7 @@ $ git merge hotfix
 </li>
 <li>Sau đó thực hiện <code>commit</code> để snapshot công việc đã làm, kết quả như hình sau:</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/2.6.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/2.6.png"/></p>
 <ul>
 <li>Nhánh <code>iss53</code> di chuyển về phía trước một cách độc lập.</li>
 <li>Giả sử quyết định việc giải quyết vấn đề iss53 đã hoàn thành và sẵn sàng để tích hợp vào nhánh <code>master</code>. Để làm điều này , cần phải tích hợp nhánh <code>iss53</code> lại. Cần ohai3 chuyển sang nhánh mà cần được tích hợp vào và chạy lệnh <code>git merge</code>:
@@ -585,12 +585,12 @@ $git megre iss53
 <li>Lần này khác so với lần tích hợp <code>hotfix</code> trước đó. Git thực hiện một tích hợp 3 chiều, sử dụng hai snapshot được trỏ tới bởi các đầu node của nhánh và node cha chung cho cả hai. Vì commit trên nhánh <code>master</code> không phải là cha trực tiếp của nhánh <code>iss53</code> đang tích hợp vào.</li>
 <li>Hình ảnh sau mình họa ba snapshot mà Git sử dụng cho phép tích hợp này :</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/2.7.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/2.7.png"/></p>
 <ul>
 <li>Git tự động nhận dạng cha chung phù hợp nhất để tích hợp các nhánh với nhau.</li>
 <li>Thay vì việc chỉ di chuyển con trỏ về phía trước, Git tạo một snapshot mới được tích hợp từ lần tích hợp 3 chiều này và cũng tự tạo một commit mới trỏ tới nó. Nó được gọi là "commit tích hợp" vì nó đặc biệt có nhiều hơn 1 cha.</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/2.8.png"/> </p>
+<p><img alt="GitHub Logo" src="/technical/images/2.8.png"/> </p>
 <h2 id="quan-li-cac-nhanh">Quản lí các nhánh</h2>
 <ul>
 <li>Lệnh <code>git branch</code> khi không thêm tham số  nó sẽ hiển thị danh sách của tất cả các nhánh hiện tại:</li>
@@ -639,7 +639,7 @@ $git megre iss53
 <p>Trong thực tế, con trỏ di chuyể dọc theo đường thằng của các commit. Các nhánh ổn định hơn thường ở phía cuối của đường thẳng, các nhánh đang phát triển ở phía đầu hàng ,như hình sau:</p>
 </li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/3.1.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/3.1.png"/></p>
 <ul>
 <li>
 <p>Nhánh ổn định hơn thường ở phía cuối hàng trong lịch sử commit.</p>
@@ -648,7 +648,7 @@ $git megre iss53
 <p>Có lẻ dễ hiểu hơn khi coi các nhánh là các xi-lô như trong hình sau:</p>
 </li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/3.2.png"/> </p>
+<p><img alt="GitHub Logo" src="/technical/images/3.2.png"/> </p>
 <h3 id="nhanh-topic"><strong>Nhánh topic</strong></h3>
 <ul>
 <li>Một nhánh chủ đề là nhánh có vòng đời ngắn mà bạn tạo ra để phát triển một tính năng nào đó hoặc tương tự. </li>
@@ -659,11 +659,11 @@ $git megre iss53
 <p>Ví dụ về thực hiện một số công việc trên nhánh <code>master</code>, tạo nhánh giải quyết vấn đề <code>iss91</code> , làm việc trên đó một chút rùi tạo một nhánh thứ hai cùng giải quyết vấn đề đó nhưng theo cách khác <code>iss91v2</code> , quay chở lại <code>master</code> và làm việc trong một khoảng thời gian nhất định, sau đó tạo một nhánh <code>dumbidea</code>về một ý tưởng của bạn mà bạn không chắc đó là ý tưởng hay hay không. Lúc này lịch sử commit của bạn sẽ như hình sau:</p>
 </li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/3.3.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/3.3.png"/></p>
 <ul>
 <li>Bây giờ bạn quyết định lựa chọn cách giải quyết <code>iss91v2</code> và ý kiến <code>dumbidea</code> là ý kiến hợp lý. Quyết định tích hợp hai commit này lại. Bỏ đi nhánh <code>isss91</code> (mất commit C5 và C6 ). Lịch sử commit bây giờ sẽ như hình sau:</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/3.4.png"/> </p>
+<p><img alt="GitHub Logo" src="/technical/images/3.4.png"/> </p>
 </article>
 </div>
 </div>
