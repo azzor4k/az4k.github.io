@@ -273,7 +273,7 @@ header
 
 .header-area .main-nav {
   min-height: 80px;
-  background: #16403ee6;
+  background: transparent;
 }
 
 .header-area .main-nav .logo {
