@@ -1,0 +1,92 @@
+.md-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2.4rem;
+    transition: background-color .25s,color .25s;
+    background-color: #16403ee6;
+    color: #fff;
+    box-shadow: none;
+    z-index: 2;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+nav__title--site {
+    position: relative;
+    background-color: #1f5856e6;
+    color: #fff;
+}
+
+.md-tabs {
+    width: 100%;
+    -webkit-transition: background 0.25s;
+    transition: background 0.25s;
+    background-color: #16403ee6;
+    color: #fff;
+    overflow: auto;
+  }
+  
+.md-typeset pre>code {
+    display: block;
+    margin: 0;
+    padding: .525rem .6rem;
+    background-color: transparent;
+    font-size: inherit;
+    box-shadow: none;
+    -webkit-box-decoration-break: slice;
+    box-decoration-break: slice;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
+.pagebreak{
+    page-break-after: always;
+}
+
+@page {
+    size: a4 portrait;
+    margin: 20mm 5mm 20mm 5mm;
+    counter-increment: page;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    white-space: pre;
+    color: grey;
+    @top-right {
+      content: "Page " counter(page);
+    }
+    @bottom-center {
+      content: "Azzor4k";
+    }
+  }
+  
+@media print {
+  .md-typeset table:not([class]) {
+    display: block;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 76.1875em) {
+    html .md-nav--primary .md-nav__title--site {
+      background-color: #1f5856e6;
+    }
+  }
+  
+@media (max-width: 480px) {
+  .md-sidebar {
+    display: block !important;
+  }
+  .md-sidebar.md-sidebar--secondary {
+    display: none !important;
+  }
+  .md-nav__list .md-nav__item {
+    display: none;
+  }
+  .md-nav__list .md-nav__item.md-nav__item--nested {
+    display: block;
+  }
+  .md-nav__list .md-nav__item.md-nav__item--nested .md-nav__item {
+    display: block;
+  }
+}

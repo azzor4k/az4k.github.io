@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
+<link href="https://azzor4k.github.io/docs/docs_se/HAPROXY/" rel="canonical"/>
+<meta content="Tài liệu tự overview lại!" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../../images/aZ4k_ico.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.4.0" name="generator"/>
+<title>HAPROXY - aZ4k Docs</title>
+<link href="../../assets/stylesheets/application.0284f74d.css" rel="stylesheet"/>
+<script src="../../assets/javascripts/modernizr.74668098.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+<link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../../css/extra-material-theme.css" rel="stylesheet"/>
+<link href="../../css/code-tabs.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-135465513-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#haproxy" tabindex="1">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              aZ4k Docs
+            </span>
+<span class="md-header-nav__topic">
+              
+                HAPROXY
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-icon md-search__icon" for="__search"></label>
+<button class="md-icon md-search__icon" data-md-component="reset" tabindex="-1" type="reset">
+        
+      </button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+            Type to start searching
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../ARP/" title="System Docs">
+          System Docs
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_nw/" title="Network Docs">
+        Network Docs
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_dev/" title="Dev Docs">
+          Dev Docs
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+    aZ4k Docs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      System Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+        System Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ARP/" title="ARP">
+      ARP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DHCP/" title="DHCP">
+      DHCP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../NAT/" title="NAT">
+      NAT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SEMAPHORES/" title="SEMAPHORES">
+      SEMAPHORES
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        HAPROXY
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="HAPROXY">
+      HAPROXY
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#haproxy-la-gi" title="Haproxy là gì?">
+    Haproxy là gì?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#thuat-ngu-trong-haproxy" title="Thuật ngữ trong Haproxy?">
+    Thuật ngữ trong Haproxy?
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#access-control-list-acl" title="Access Control List (ACL)">
+    Access Control List (ACL)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backend" title="Backend">
+    Backend
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#frontend" title="Frontend">
+    Frontend
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cac-mode-loadbalancing-cua-haproxy" title="Các mode loadbalancing của Haproxy?">
+    Các mode loadbalancing của Haproxy?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cac-thuat-toan-can-bang-tai" title="Các thuật toán cân bằng tải?">
+    Các thuật toán cân bằng tải?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tim-hieu-ve-sticky-session" title="TÌm hiểu về sticky session?">
+    TÌm hiểu về sticky session?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tim-hieu-ve-cookie-webpool-prefix" title="Tìm hiểu về Cookie webpool prefix?">
+    Tìm hiểu về Cookie webpool prefix?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tim-hieu-ve-health-check" title="Tìm hiểu về health check?">
+    Tìm hiểu về health check?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#haproxy-co-tinh-san-sang-cao" title="Haproxy có tính sẵn sàng cao.">
+    Haproxy có tính sẵn sàng cao.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference" title="REFERENCE">
+    REFERENCE
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../KAFKA/" title="KAFKA">
+      KAFKA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../GIT/" title="GIT">
+      GIT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JENKINS/" title="JENKINS">
+      JENKINS
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM/" title="JVM">
+      JVM
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM_MONITOR/" title="JVM MONITOR">
+      JVM MONITOR
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_nw/" title="Network Docs">
+      Network Docs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Dev Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+        Dev Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="PHP">
+      PHP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Python">
+      Python
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Golang">
+      Golang
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#haproxy-la-gi" title="Haproxy là gì?">
+    Haproxy là gì?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#thuat-ngu-trong-haproxy" title="Thuật ngữ trong Haproxy?">
+    Thuật ngữ trong Haproxy?
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#access-control-list-acl" title="Access Control List (ACL)">
+    Access Control List (ACL)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backend" title="Backend">
+    Backend
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#frontend" title="Frontend">
+    Frontend
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cac-mode-loadbalancing-cua-haproxy" title="Các mode loadbalancing của Haproxy?">
+    Các mode loadbalancing của Haproxy?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cac-thuat-toan-can-bang-tai" title="Các thuật toán cân bằng tải?">
+    Các thuật toán cân bằng tải?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tim-hieu-ve-sticky-session" title="TÌm hiểu về sticky session?">
+    TÌm hiểu về sticky session?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tim-hieu-ve-cookie-webpool-prefix" title="Tìm hiểu về Cookie webpool prefix?">
+    Tìm hiểu về Cookie webpool prefix?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tim-hieu-ve-health-check" title="Tìm hiểu về health check?">
+    Tìm hiểu về health check?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#haproxy-co-tinh-san-sang-cao" title="Haproxy có tính sẵn sàng cao.">
+    Haproxy có tính sẵn sàng cao.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference" title="REFERENCE">
+    REFERENCE
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="haproxy">Haproxy</h1>
+<h2 id="haproxy-la-gi">Haproxy là gì?</h2>
+<ul>
+<li>Haproxy, viết tắt của High Availability Proxy.</li>
+<li>Haproxy là một máy chủ proxy cân bằng tải giữa 2 giao thức TCP và HTTP.</li>
+<li>Loabalancing: cân bằng tải là một giải pháp chung cho việc  phân phối lưu lượng truy cập mạng hoặc ứng dụng trên một số máy chủ. Nhằm mục đích tối ưu hóa việc sử dụng tài nguyên, tránh downtime, quá tải hệ thống mạng nhằm tăng khả năng sử dụng ứng dụng đồng thời và độ tin cậy của ứng dụng.</li>
+<li>Haproxy có thể chạy trên các mỗi trường Linux, Solaris, FreeBSD. </li>
+<li>Công dụng phổ biến nhất của Haproxy là cải thiện hiệu năng, tăng độ tin cậy của hệ thống máy chủ bằng cách phân phối khối lượng công việc trên nhiều máy chủ (như Web, App, cơ sở dữ liệu).</li>
+</ul>
+<h2 id="thuat-ngu-trong-haproxy">Thuật ngữ trong Haproxy?</h2>
+<p>Có rất nhiều thuật ngữ và khái niệm được sử dụng trong Haproxy khi nối về cân bằng tải (Loadbalancing) và máy chủ. Sau đâu tập trung vào các khái niệm thông dụng được sử dụng nhiều trong Haproxy một cách xúc tích:</p>
+<h3 id="access-control-list-acl">Access Control List (ACL)</h3>
+<p>Trong cân bằng tải, ACL được dùng để kiểm tra điều kiện và thực hiện một hành động (ví dụ như lựa chọn một server hay chặn một request) dựa trên kết quả của việc kiểm tra đó. Việc sử dụng ACL cho phép tạo một môi trường có khả năng chuyển tiếp các request một cách linh hoạt dựa trên các yếu tố khác nhau mà người dùng có thể tùy chỉnh một cách dễ dàng.</p>
+<p>Ví dụ của một ACL:
+<div class="highlight"><pre><span></span><code>acl url_site        path_url_site         /path
+</code></pre></div>
+ACL này sử dụng cho các request có chứa /path (vd như: az4k.site/path/) và các request này được redirect đến path_url_site</p>
+<h3 id="backend">Backend</h3>
+<ul>
+<li>
+<p>Backend là một tập các server mà Haproxy có thể forward các request tới. Backend được cấu hình trong mục backend trong file configuration của Haproxy. Ở dạng đơn giản nhất, một backend có thể được cài đặt bằng cách</p>
+</li>
+<li>
+<p>Đặt ra thuật toán để căn bằng tải (round-robin, least-connection,...)</p>
+</li>
+<li>
+<p>Một danh sách các máy chủ và port của chúng có thể dùng để nhận request từ Haproxy</p>
+</li>
+<li>
+<p>Một backend có thể chứa một hoặc nhiều server, về cơ bản thì càng nhiều server trong một backend thì khả năng chịu tải và performance của hệ thống càng tăng lên. Tính tin cậy của hệ thống cũng tăng lên theo phương pháp này vì khi một server bị ngắt khỏi proxy, các server có thể chịu tải thay được cho nó.</p>
+</li>
+<li>Haproxy còn cho phép một server backup chuyên dụng, được sử dụng khi các server đều offline. Server backup này thường sẽ chứa các thông báo hệ thống offline hoặc một thông điệp nào đó để người dùng có thể biết được rằng hệ thống đang tạm thời không có sẵn.</li>
+</ul>
+<p>Một ví dụ cấu hình của backend trong file cconfiguration của Haproxy:
+<div class="highlight"><pre><span></span><code>backend web-backend
+    balance leastconn
+    mode http
+    server backend-1 web-backend-1.com check
+    server backend-2 web-backend-2.com check
+    server backend-3 backup-backend.com check backup
+
+backend docs-backend
+    balance leastconn
+    server docs-1 docs-backends-1.com check
+    server docs-2 docs-backends-2.com check
+    server docs-3 backup-docs-backends.com check backup
+</code></pre></div>
+- Dòng balance leaseconn chỉ ra rằng thuật toán để cân bằng tải là chọn những server có ít kết nối tới nhất.
+- Dòng mode http chỉ ra rằng proxy sẽ chỉ cân bằng cho các kết nối tại tầng 7 của Internet Layer (Tầng ứng dụng)</p>
+<h3 id="frontend">Frontend</h3>
+<ul>
+<li>Frontend được dùng để định nghĩa cách mà các request được điều hướng cho backend. Frontend được định nghĩa trong mục frontend của Haproxy configuration. Các cấu hình cho frontend gồm:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>- Một bộ địa chỉ IP và port (ví dụ: 10.0.0.1:8080, *:443,...)
+- Các ACL do người dùng định nghĩa
+- Backend được dùng để nhận request
+</code></pre></div>
+Một ví dụ cấu hình của frontend trong file configuration của Haproxy:</p>
+<div class="highlight"><pre><span></span><code>frontend web
+  bind 0.0.0.0
+  default_backend web-backend
+
+frontend forum
+  bind 0.0.0.0:8080
+  default_backend docs-backend
+</code></pre></div>
+<h2 id="cac-mode-loadbalancing-cua-haproxy">Các mode loadbalancing của Haproxy?</h2>
+<ul>
+<li>Không có cân bằng tải: <ul>
+<li>Đây là mô hình đơn giản. Phục vụ cho môi trường development + testing.</li>
+<li>Không cần đảm bảo tính tin cậy của ứng dụng.</li>
+<li>Với mô hình này user sẽ kết nối trực tiếp đến web server mà không cần dùng loadbalacing nào.</li>
+</ul>
+</li>
+<li>
+<p>Haproxy hoạt động ở layer 4 và layer 7:</p>
+<ul>
+<li>
+<p>Layer 4: </p>
+<ul>
+<li>Xử lí dữ liệu tìm thấy trong các giao thức layer Network và Transport. Layer 4 loadbalancer chỉ đơn giản là chuyển tiếp gói tin dữ liệu mạng đến và đi từ các máy chủ mà không kiểm tra nội dung của các gói dữ liệu.</li>
+<li>Cách đơn giản nhất có thể loadbalacing đến nhiều web server là sử dụng loadbalacing trêng layer 4 này. Các request sẽ được điều hướng dựa trên địa chỉ IP + port. Ví dụ req "https:/az4k.site/docs" sẽ được chuyển hướng đến backend được dùng cho điều hướng domain az4k.site với cỗng port 443.
+  <img alt="Layer 4" src="/images/haproxy_layer4.png"/></li>
+</ul>
+</li>
+<li>
+<p>Layer 7: </p>
+<ul>
+<li>Phân phối yêu cầu dựa trên dữ liệu tìm thấy trong layer, như HTTP. Layer 7 loadbalancer điều phối lưu lượng theo một cách chi tiết hơn so với layer 4. Một loadbalacer chấm dứt kết nối mạng lưới transport và đọc message bên trong. Nó có thể quyết định cân bằng tải dựa trên nội dung của data. Sau đó tạo mới một kết nối TCP đến máy chủ đã chọn hoặc tái sử dụng nếu có sẵn HTTP keepalives và tạo yêu cầu đến máy chủ.</li>
+<li>Sử dụng loadbalacing ở layer 7. Có thể điều hướng request dựa trên nội dung request đó. Với loadbalacing layer 7, nhiều backend có thể được sử dụng cho cùng một domain + port. Ví dụ req "https:/az4k.site/docs". Request đó sẽ được điều hướng đến backend xử ký cho docs.
+  <img alt="Layer 7" src="/images/haproxy_layer7.png"/></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="cac-thuat-toan-can-bang-tai">Các thuật toán cân bằng tải?</h2>
+<p>Các thuật toán cân bằng tải được sử dụng gồm
+- Roundrobin: các request sẽ được chuyển đến server theo lượt. Đây là thuật toán mặc định được sử dụng cho Haproxy. 
+- Leastconn: các request sẽ được chuyển đến server nào có ít kết nối đến nó nhất.
+- Source: các request được chuyển đến server bằng các hash của IP người dùng. Phương pháp này giúp người dùng đảm bảo luôn kết nối tới một server</p>
+<h2 id="tim-hieu-ve-sticky-session">TÌm hiểu về sticky session?</h2>
+<ul>
+<li>Một số ứng dụng yêu cầu người dùng phải giữ kết nối tới cùng một server thuộc backend, để giữ kết nối giữa client với một backend server bạn có thể sử dụng tùy chọn sticky sessions,</li>
+<li>Trong môi trường web, nhiều khi chúng ta cần cố định session của user, như để duy trì trạng thái login. Khi đó, chúng ta cần cố định session trên một server. Haproxy hỗ trợ một số thuật toán Load Balancing duy trì trạng thái kết nối mà cho phép cố định session như hdr, rdp-cookie, source, uri hoặc url_param.</li>
+<li>Nếu chúng ta muốn cố định session mà vẫn sử dụng các thuật toán load balancing như roundrobin, leastconn, hoặc static-rr, khi đó chúng ta sử dụng “Sticky Session”. Sticky session cho phép cố định session của users mà sử dụng cookie, và Haproxy sẽ điều phối để luôn request từ một user đến cùng một server.</li>
+<li>Để sử dụng sticky session trong Haproxy, chúng ta thêm tùy chọn “cookie cookie_name insert/prefix” vào trong phần backend.</li>
+<li>Hạn chế của sticky session: <ul>
+<li>Với sticky session, việc các request từ một user sẽ chỉ cố định vào một server. </li>
+<li>Vì vậy mà sẽ không đảm bảo được tính điều phối nhiều request từ một users đến nhiều server. </li>
+<li>Để khắc phục điểm hạn chế này, thì hiện nay có một số phần mềm như redis, memcached, … cho phép lưu session của user, còn việc điều phối các request của user thì vẫn thực hiện bình thường đến các server.</li>
+</ul>
+</li>
+</ul>
+<h2 id="tim-hieu-ve-cookie-webpool-prefix">Tìm hiểu về Cookie webpool prefix?</h2>
+<ul>
+<li>Webpool là tên của cookie sẽ được chèn bởi Haproxy tại mỗi yêu cầu dc thực hiện khi áp dụng thuật toán loadbalacing. </li>
+<li>Quản lý session. <ul>
+<li>Cookie lưu trử ở phía client , session ở phía server</li>
+<li>Do các session lưu theo dạng key-val và mỗi user có một dạng riêng</li>
+<li>Dữ liệu Session ko đồng nhất giữa các webserver</li>
+</ul>
+</li>
+<li>Chỉ sử dụng 1 app-key cho các web server</li>
+<li>Sử dụng loadbalacing</li>
+<li>Lưu session vào cookie: data session sẽ được lưu trên cookie , ko quan tâm request được forward ra. Đảm bảo tính đồng nhất session giữa các webserver</li>
+</ul>
+<blockquote>
+<p>server web1  10.0.2.10:80 cookie webpool-web1 check
+<div class="highlight"><pre><span></span><code>webpool-web1 : giá trị cookie của máy chủ web1 . 
+check: để kiểm tra sự sống của máy chủ web1 trên cỗng 80.
+</code></pre></div>
+Giá trị priority của 2 GateWay giống nhau thì như thế nào?
+<div class="highlight"><pre><span></span><code>Nếu 2 GateWay chung Priority thì mặc định nếu cả 2 restart dịch vụ cùng lúc thì sẽ GateWay nào có Host IP nhỏ hơn sẽ Broadcast VIP.. còn không thì
+GateWay nào restart dịch vụ trước thì sẽ chiếm phiên broadcast VIP trừ khi stop thì mới chuyển broadcast VIP sang GATEWAY khác.. ko phân biệt State
+Master hay Backup
+</code></pre></div></p>
+</blockquote>
+<h2 id="tim-hieu-ve-health-check">Tìm hiểu về health check?</h2>
+<ul>
+<li>Haproxy sử dụng health check để phát hiện các backend server sẵn sàng xử lý request. Kỹ thuật này sẽ tránh việc loại bỏ server khỏi backend thủ công khi backend server không sẵn sàng. Health check sẽ cố gắng thiết lập kết nối TCP tới server để kiểm tra backend server có sẵn sàng xử lý request.</li>
+<li>Nếu health check không thể kết nối tới server, nó sẽ tự động loại bỏ server khởi backend, các traffic tới sẽ không được forward tới server cho đến khi nó có thể thực hiện được health check. Nếu tất cả server thuộc backend đều xảy vấn đề, dịch vụ sẽ trở trên không khả dụ (trả lại status code 500) cho đến khi 1 server thuộc backend từ trạng thái không khả dụ chuyển sang trạng thái sẵn sàng.</li>
+</ul>
+<h2 id="haproxy-co-tinh-san-sang-cao">Haproxy có tính sẵn sàng cao.</h2>
+<ul>
+<li>Loadbalacing trên layer 4 và layer 7 được miêu tả ở trên đều được sử dụng để cân bằng để chuyển các request tới các backend server. Tuy nhiên, chính việc  loadbalace của bạn là một điểm lỗi (single point of failure), vì nếu cân bằng tải gặp sự cố nhưng các server đều chạy bình thường thì người dùng cũng không thể kết nối đến được ứng dụng web trong khi server vẫn đang chạy bình thường.</li>
+<li>Một cài đặt cấu hình cao sẽ không có một điểm lỗi nào. Nó ngăn chặn việc nếu một máy chủ không hoạt động làm ảnh hưởng tới toàn bộ hệ thống. Nên đề nghị việc cài đặt và cấu hình loadbalacing tương tự. Và dùng công nghệ keepalive để Haproxy luôn có tính sẵn sàng cao để giải quyết vấn đề trên. </li>
+</ul>
+<h2 id="reference">REFERENCE</h2>
+<div class="highlight"><pre><span></span><code>https://vnsys.wordpress.com/2019/01/11/can-bang-tai-trong-Haproxy/
+https://viblo.asia/p/huong-dan-su-dung-Haproxy-cho-load-balancing-ung-dung-4P856jp95Y3
+https://blog.cloud365.vn/linux/tong-quan-Haproxy/
+</code></pre></div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../SEMAPHORES/" rel="prev" title="SEMAPHORES">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                SEMAPHORES
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../KAFKA/" rel="next" title="KAFKA">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                KAFKA
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            By azzor4k. Tài liệu tự overview lại! Nên có gì sai sai bỏ qua vui vẻ không quạo ^^
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/application.245445c6.js"></script>
+<script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+<script src="../../js/mermaid.min.js"></script>
+</body>
+</html>

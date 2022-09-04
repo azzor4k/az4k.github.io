@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
+<link href="https://azzor4k.github.io/docs/docs_se/JVM/" rel="canonical"/>
+<meta content="Tài liệu tự overview lại!" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../../images/aZ4k_ico.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.4.0" name="generator"/>
+<title>JVM - aZ4k Docs</title>
+<link href="../../assets/stylesheets/application.0284f74d.css" rel="stylesheet"/>
+<script src="../../assets/javascripts/modernizr.74668098.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+<link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../../css/extra-material-theme.css" rel="stylesheet"/>
+<link href="../../css/code-tabs.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-135465513-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#jvm-java-virtual-machine" tabindex="1">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              aZ4k Docs
+            </span>
+<span class="md-header-nav__topic">
+              
+                JVM
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-icon md-search__icon" for="__search"></label>
+<button class="md-icon md-search__icon" data-md-component="reset" tabindex="-1" type="reset">
+        
+      </button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+            Type to start searching
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../ARP/" title="System Docs">
+          System Docs
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_nw/" title="Network Docs">
+        Network Docs
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_dev/" title="Dev Docs">
+          Dev Docs
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+    aZ4k Docs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      System Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+        System Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ARP/" title="ARP">
+      ARP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DHCP/" title="DHCP">
+      DHCP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../NAT/" title="NAT">
+      NAT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SEMAPHORES/" title="SEMAPHORES">
+      SEMAPHORES
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HAPROXY/" title="HAPROXY">
+      HAPROXY
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../KAFKA/" title="KAFKA">
+      KAFKA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../GIT/" title="GIT">
+      GIT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JENKINS/" title="JENKINS">
+      JENKINS
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        JVM
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="JVM">
+      JVM
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tong-quat" title="Tổng Quát">
+    Tổng Quát
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inh-nghia" title="Định Nghĩa">
+    Định Nghĩa
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cau-truc" title="Cấu Trúc">
+    Cấu Trúc
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cac-thanh-phan-chinh-cua-jvm" title="Các thành phần chính của JVM">
+    Các thành phần chính của JVM
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#co-che-lam-viec" title="Cơ chế làm việc">
+    Cơ chế làm việc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hoat-ong" title="Hoạt động">
+    Hoạt động
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM_MONITOR/" title="JVM MONITOR">
+      JVM MONITOR
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_nw/" title="Network Docs">
+      Network Docs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Dev Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+        Dev Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="PHP">
+      PHP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Python">
+      Python
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Golang">
+      Golang
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tong-quat" title="Tổng Quát">
+    Tổng Quát
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inh-nghia" title="Định Nghĩa">
+    Định Nghĩa
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cau-truc" title="Cấu Trúc">
+    Cấu Trúc
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cac-thanh-phan-chinh-cua-jvm" title="Các thành phần chính của JVM">
+    Các thành phần chính của JVM
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#co-che-lam-viec" title="Cơ chế làm việc">
+    Cơ chế làm việc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hoat-ong" title="Hoạt động">
+    Hoạt động
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="jvm-java-virtual-machine">JVM - Java Virtual Machine <h1></h1>
+<h2 id="tong-quat">Tổng Quát</h2>
+<ul>
+<li>Tất cả các chương trình khi muốn thực thi được thì phải bắt buộc phải được biên dịch sang code máy.</li>
+<li>Code máy từng loại kiến trúc CPU của mỗi máy tính là hoàn toàn khác nhau.</li>
+<li>Ví dụ trước đây một chương trình chạy được trên Windows muốn chạy được trên hệ điều hành khác chẳng hạn
+như linux thì phải chỉnh sửa và biên dịch lại đó là một bất tiện khó khăn đối với các lập trình viên.</li>
+<li>Từ đó ngôn ngữ lập trình Java ra đời, nhờ vào máy ảo Java mà khó khăn trên đã được giải quyết một cách 
+dễ dàng. </li>
+<li>Với một chương trình được viết bằng ngôn ngữ Java sẽ được biên dịch ra code của máy ảo Java
+(code java bytecode). </li>
+<li>Sau đó máy ảo Java sẽ chịu trách nhiệm chuyển tiếp code java bytecode thành code 
+máy tương ứng. </li>
+</ul>
+<h2 id="inh-nghia">Định Nghĩa</h2>
+<blockquote>
+<p>JVM viết tắt của Java Virtual Machine
+<div class="highlight"><pre><span></span><code>Là một máy ảo Java- trình thông dịch của Java.
+Là môi trường chạy các ứng dụng được viết bằng ngôn ngữ JAVA.
+Nó cung cấp môi trường runtime mà trong đó Java Bytecode có thể thực thi được.
+Nhờ có JVM mà Java có thể chạy trên nhiều Platform khác nhau. 
+Cứ mỗi Platform sẽ có một JVM tương ứng. VD: JVM cho Ubuntu. JVM cho Windows.
+</code></pre></div>
+<img alt="GitHub Logo" src="/images/JVM.png"/>
+Bytecode là 
+<div class="highlight"><pre><span></span><code>cách thức lưu trữ dạng mã các chỉ thị trong lập trình máy tính, 
+được thiết kế để phần mềm thông dịch thực hiện trên nền tảng máy ảo.
+</code></pre></div>
+Các nhiệm vụ chính của JVM 
+ <code>- Tải code
+- Kiểm tra code
+- Thực thi code 
+- Cung cấp môi trường runtime</code></p>
+</blockquote>
+<h2 id="cau-truc">Cấu Trúc</h2>
+<h3 id="cac-thanh-phan-chinh-cua-jvm">Các thành phần chính của JVM</h3>
+<p><img alt="GitHub Logo" src="/images/CTJVM.png"/></p>
+<ul>
+<li>Classloader: là một hệ thống con của JVM, được sử dụng để tải class file hay lớp được định nghĩa.</li>
+<li>Class Area: lưu trữ cấu trúc của các lớp, thuộc tính, phương thức của lớp, code của cúa phương thức.</li>
+<li>Heap: là vùng lưu trữ dữ liệu runtime mà  các đối tượng được khởi tạo  </li>
+<li>Stack:  lưu trữ các fame. Mỗi fame chứa các biến cục bộ và thực thi một hàm gọi và trả về kết quả. 
+Mỗi thread có một stack riêng được tạo tại cùng thời điểm với thread. 
+Mỗi frame sẽ được tạo khi một hàm được gọi và hủy khi việc gọi hàm kết thúc.</li>
+<li>Program counter Reister: nó chứa địa chỉ của máy chủ ảo chỉ lệnh JVM hiện tại đang thực thi.</li>
+<li>Native method stack: bao gồm các phương thức được thực thi sử dụng trong chương trình</li>
+<li>Execution engine: <ul>
+<li>Bao gồm bộ xử lý ảo</li>
+<li>Trình thông dịch: đọc byte code và thực hiện các chỉ thị.</li>
+<li>JIT Compiler: biên dịch mã byte code sang mã máy.</li>
+</ul>
+</li>
+<li>Native method interface: là khung lập trình cho phép các phương thức chạy trên JVM</li>
+<li>Java Native Libraries: là thư viện cho phép được viết bằng các ngôn ngủ khác như C, C++, Assembly trên JVM.</li>
+</ul>
+<h2 id="co-che-lam-viec">Cơ chế làm việc</h2>
+<blockquote>
+<p>JVM được chia thành 3 phần chính:
+<div class="highlight"><pre><span></span><code>1. Class-Loader Subsystem: sẽ tìm kiếm và tải các file .class vào vùng nhớ của Java.
+2. Runtime Data Area: là vùng nhớ cấp phát cho JVM
+3. Execution Engine: chuyển các lệnh của JVM trong file .class thành các lệnh của máy.
+</code></pre></div></p>
+</blockquote>
+<h2 id="hoat-ong">Hoạt động</h2>
+<p><img alt="GitHub Logo" src="/images/HDJVM.png"/></p>
+<ul>
+<li>Cung cấp môi trường để code java có thể thực thi.</li>
+<li>Chương trình Java khi biên dịch sẽ tạo ra các file *.class chứ bytecode.</li>
+<li>Đọc bytecode stream.</li>
+<li>Kiểm tra bytecode </li>
+<li>Các file *.class này sẽ được JVM thực hiện chuyển bytecode thành mã máy tương ứng với từng hệ điều hành 
+và phần cứng khác nhau để thực thi.</li>
+</ul>
+</h1></article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../JENKINS/" rel="prev" title="JENKINS">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                JENKINS
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../JVM_MONITOR/" rel="next" title="JVM MONITOR">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                JVM MONITOR
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            By azzor4k. Tài liệu tự overview lại! Nên có gì sai sai bỏ qua vui vẻ không quạo ^^
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/application.245445c6.js"></script>
+<script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+<script src="../../js/mermaid.min.js"></script>
+</body>
+</html>

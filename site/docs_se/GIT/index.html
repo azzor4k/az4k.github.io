@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
+<link href="https://azzor4k.github.io/docs/docs_se/GIT/" rel="canonical"/>
+<meta content="Tài liệu tự overview lại!" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../../images/aZ4k_ico.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.4.0" name="generator"/>
+<title>GIT - aZ4k Docs</title>
+<link href="../../assets/stylesheets/application.0284f74d.css" rel="stylesheet"/>
+<script src="../../assets/javascripts/modernizr.74668098.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+<link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../../css/extra-material-theme.css" rel="stylesheet"/>
+<link href="../../css/code-tabs.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-135465513-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#git" tabindex="1">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              aZ4k Docs
+            </span>
+<span class="md-header-nav__topic">
+              
+                GIT
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-icon md-search__icon" for="__search"></label>
+<button class="md-icon md-search__icon" data-md-component="reset" tabindex="-1" type="reset">
+        
+      </button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+            Type to start searching
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../ARP/" title="System Docs">
+          System Docs
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_nw/" title="Network Docs">
+        Network Docs
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_dev/" title="Dev Docs">
+          Dev Docs
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+    aZ4k Docs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      System Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+        System Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ARP/" title="ARP">
+      ARP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DHCP/" title="DHCP">
+      DHCP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../NAT/" title="NAT">
+      NAT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SEMAPHORES/" title="SEMAPHORES">
+      SEMAPHORES
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HAPROXY/" title="HAPROXY">
+      HAPROXY
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../KAFKA/" title="KAFKA">
+      KAFKA
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        GIT
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="GIT">
+      GIT
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quan-ly-he-thong-phien-ban" title="Quản lý hệ thống phiên bản">
+    Quản lý hệ thống phiên bản
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#he-thong-quan-li-phien-ban-cuc-bo" title="Hệ thống quản lí phiên bản cục bộ">
+    Hệ thống quản lí phiên bản cục bộ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#he-thong-quan-li-phien-ban-tap-trung" title="Hệ thống quản lí phiên bản tập trung">
+    Hệ thống quản lí phiên bản tập trung
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#he-thong-quan-li-phien-ban-phan-tan" title="Hệ thống quản lí phiên bản phân tán">
+    Hệ thống quản lí phiên bản phân tán
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#co-ban-ve-git" title="Cơ bản về Git">
+    Cơ bản về Git
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phan-nhanh-trong-git" title="Phân nhánh trong Git">
+    Phân nhánh trong Git
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#co-ban-ve-phan-nhanh-va-tich-hop" title="Cơ bản về phân nhánh và tích hợp">
+    Cơ bản về phân nhánh và tích hợp
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quan-li-cac-nhanh" title="Quản lí các nhánh">
+    Quản lí các nhánh
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quy-trinh-lam-viec-phan-nhanh" title="Quy trình làm việc phân nhánh">
+    Quy trình làm việc phân nhánh
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nhanh-lau-oi" title="Nhánh lâu đời">
+    Nhánh lâu đời
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nhanh-topic" title="Nhánh topic">
+    Nhánh topic
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JENKINS/" title="JENKINS">
+      JENKINS
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM/" title="JVM">
+      JVM
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM_MONITOR/" title="JVM MONITOR">
+      JVM MONITOR
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_nw/" title="Network Docs">
+      Network Docs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Dev Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+        Dev Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="PHP">
+      PHP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Python">
+      Python
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Golang">
+      Golang
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quan-ly-he-thong-phien-ban" title="Quản lý hệ thống phiên bản">
+    Quản lý hệ thống phiên bản
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#he-thong-quan-li-phien-ban-cuc-bo" title="Hệ thống quản lí phiên bản cục bộ">
+    Hệ thống quản lí phiên bản cục bộ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#he-thong-quan-li-phien-ban-tap-trung" title="Hệ thống quản lí phiên bản tập trung">
+    Hệ thống quản lí phiên bản tập trung
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#he-thong-quan-li-phien-ban-phan-tan" title="Hệ thống quản lí phiên bản phân tán">
+    Hệ thống quản lí phiên bản phân tán
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#co-ban-ve-git" title="Cơ bản về Git">
+    Cơ bản về Git
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phan-nhanh-trong-git" title="Phân nhánh trong Git">
+    Phân nhánh trong Git
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#co-ban-ve-phan-nhanh-va-tich-hop" title="Cơ bản về phân nhánh và tích hợp">
+    Cơ bản về phân nhánh và tích hợp
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quan-li-cac-nhanh" title="Quản lí các nhánh">
+    Quản lí các nhánh
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quy-trinh-lam-viec-phan-nhanh" title="Quy trình làm việc phân nhánh">
+    Quy trình làm việc phân nhánh
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nhanh-lau-oi" title="Nhánh lâu đời">
+    Nhánh lâu đời
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nhanh-topic" title="Nhánh topic">
+    Nhánh topic
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="git">GIT</h1>
+<h2 id="quan-ly-he-thong-phien-ban">Quản lý hệ thống phiên bản</h2>
+<ul>
+<li>Hệ thống quản lí phiên bản - VCS(Version Control System)
+<div class="highlight"><pre><span></span><code>Khôi phục lại phiên bản cũ của các file, toàn dự án.
+Xem lại các thay đổi đã được thực hiện theo thời gian, người chỉnh sửa, lịch sữ chỉnh sữa.
+</code></pre></div></li>
+<li>Hệ thống quản lí phiên bảo bao gồm: Cục bộ, tập trung, phân tán.</li>
+</ul>
+<h3 id="he-thong-quan-li-phien-ban-cuc-bo"><strong>Hệ thống quản lí phiên bản cục bộ</strong></h3>
+<p><img alt="GitHub Logo" src="/images/PBCB.png"/></p>
+<p>Hệ thống quản lí phiên bản VCS cục bộ có chứa một database đơn giản lưu trữ tất cả các sự thay đổi của các file dưới sự kiểm soát thay đổi.  </p>
+<h3 id="he-thong-quan-li-phien-ban-tap-trung"><strong>Hệ thống quản lí phiên bản tập trung</strong></h3>
+<p><img alt="GitHub Logo" src="/images/PBTT.png"/></p>
+<p>Hệ thống quản lí phiên bản tập trung (Centralized Version Control Systems - CVCSs). Mô hình bao gồm một máy chủ chứa tất cả các file đã được phiên bản hóa và danh sách các người dùng có quyền thay đổi file này trên máy chủ trung tâm đó.</p>
+<h3 id="he-thong-quan-li-phien-ban-phan-tan"><strong>Hệ thống quản lí phiên bản phân tán</strong></h3>
+<p><img alt="GitHub Logo" src="/images/PBPT.png"/></p>
+<p>Hệ Thống Quản Lý Phiên Bản Phân Tán (Distributed Version Control Systems - DVCSs). Mô hình này người dùng  không chí "check out" (sao chép về cục bộ) phiên bản mới nhất của các tập tin: mirror, repository. Chính vì vậy nếu một máy chủ nào mà hệ thống quản lý phiên bản phân tán ngừng hoạt động thì kho chứa bất kì máy client nào cũng có thể sao chép ngược trở lại máy chủ để khôi phục lại toàn bộ hệ thống. Mỗi checkout thực sự là một bản sao đầy đủ cho tất cả dữ liệu.  </p>
+<h2 id="co-ban-ve-git">Cơ bản về Git</h2>
+<ul>
+<li>Git là một hệ thống kiểm soat phiên bản (VCS) dùng để theo dõi các thay đổi trong tập tin và cách phối hợp sao cho nhiều người có thể làm việc trên những tập tin đó. </li>
+<li>Git là hệ thống điều khiển phiên bản phân tán, có tốc độ xử lý nhanh, đảm bảo tính toàn vẹn dữ liệu.</li>
+<li>Sự khác nhau cơ bản giữa Git và VCS.</li>
+<li>
+<p>Về mặt lý thuyết, phần lớn hệ thống khác lưu trữ thông tin dưới dạng danh sách các tập tin được thay đổi. Các hệ thống này coi thông tin được lưu trữ như là một tập hợp các tập tin và các thay đổi được thực hiện trên mỗi tập tin theo thời gian, được minh họa theo hình sau: 
+    <img alt="GitHub Logo" src="/images/1.4.png"/></p>
+</li>
+<li>
+<p>Git không nghĩ và xử lý theo cách này. Mà thay đó Git coi dữ liệu của nó giống như một tập hợp các ảnh (snapshot) của một hệ thống file nhỏ. Về cơ bản Git chụp lại một snapshot ghi lại nội dung của tất cả nội dung tập tin tại thời điểm đó và tạo ra một tham chiếu tới ảnh đó. Nếu không có sự thay đổi nào, Git không lưu trữ tập tin đó lại một lần nữa mà chỉ tạo một liên kết tới tập tin gốc đã tồn tại trước đó. Thao tác như hình sau:
+  <img alt="GitHub Logo" src="/images/1.5.png"/></p>
+</li>
+<li>
+<p>Mỗi tập tin trong Git được quản lí dựa trên ba trạng thái: committed, modified và staged.</p>
+</li>
+<li>Committed có nghĩa là dữ liệu đã được lưu trữ một cách an toàn trong cơ sở dữ liệu.</li>
+<li>Modified có nghĩa là đã thay đổi tập tin nhưng chưa commit vào database.</li>
+<li>
+<p>Staged là đã đánh dấu sẽ commit phiên bản hiện tại của một tập tin đã chỉnh sửa trong lần commit sắp tới.</p>
+</li>
+<li>
+<p>Tạo ra sử riêng biệt của 1 dự án sử dụng Git: Git directory(thư mục Git), staging area (khu vực tổ chức), working directory (thư mục làm việc).
+  <img alt="GitHub Logo" src="/images/1.6.png"/></p>
+</li>
+<li>Thư mục Git: là nơi Git lưu trử các metadata và database cho dự án.</li>
+<li>Thư mục làm việc: là bản sao một phiên bản của dự án. Những tập tin được pull từ database được nén lại trong thư mục Git.</li>
+<li>
+<p>Khu vực tổ chức: là một tập tin đơn giản chứa trong thư mục Git, chứa thông tin về những gì sẽ được commit trong lần commit sắp tới.</p>
+</li>
+<li>
+<p>Tiến trình công việc (workflow) cơ bản cũa Git:
+  <img alt="GitHub Logo" src="/images/1.7.png"/></p>
+</li>
+<li>Bạn thay đổi các tập tin trong thư mục làm việc.</li>
+<li>Bạn tổ chức tập tin, tạo mới ảnh của tập tin đó vào khu vực tổ chức.</li>
+<li>Bạn commit, ảnh của các tập tin trong khu vực tổ chức sẽ được lưu trữ vĩnh viển vào thư mục Git</li>
+</ul>
+<h2 id="phan-nhanh-trong-git">Phân nhánh trong Git</h2>
+<ul>
+<li>Git không lưu dữ liệu dưới dạng một chuỗi các thay đổi mà thay đó là một chuổi các ảnh snapshot .</li>
+<li>Khi commit, Git lưu trữ đối tượng commit mà có chứa một con trỏ tới snapshot của nội dung đã tổ chức (stage).</li>
+<li>Giả sử có một thư mục chứa ba tập tin, tổ chức tất cả chúng để commit. Quá trình tổ chức các tập tin sẽ thực hiện băm từng tập(Sử dụng mã SHA1) lưu trữ phiên bản đó của tập tin trong kho chứa Git (như các blob và thêm mã băm vào khu vực tổ chức.</li>
+<li>Lệnh <code>git commit</code> khi chạy sẽ băm tất cả các thư mục trong dự án và lưu chúng lại dạng đối tượng <code>tree</code> .</li>
+<li>Sau đó Git tạo một đối tượng <code>commit</code>  có chứa các metedata và một con trỏ tới đối tượng <code>tree</code> gốc .</li>
+<li>
+<p>Kho chứa Git bây giờ có 5 đối tượng : 3 blob cho nội dung tương ứng của từng tập tin, một tree liệt kê nội dung của thư mục và chỉ rỏ tên tập tin nào được lưu trữ trong blob nào, và một commit có con trỏ tới tree gốc và tất cả thông tin mô tả commit. Theo hình sau dữ liệu kho chứa Git:
+  <img alt="GitHub Logo" src="/images/1.8.png"/></p>
+</li>
+<li>
+<p>Khi thực hiện một số thay đổi và commit lại thì commit tiếp theo sẽ lưu một con trỏ tới commit ngay trước nó. Sau hai commit , lịch sữ dự án sẽ tương tự như hình sau: 
+  <img alt="GitHub Logo" src="/images/1.9.png"/></p>
+</li>
+<li>
+<p>Một nhánh trong Git đơn thuần là một con trỏ có khả năng di chuyển được qua những commit.</p>
+</li>
+<li>
+<p>Tên nhánh mặc định của Git là master. Commit đầu tiên chúng đều được trỏ tới nhánh <code>master</code> . Và mỗi lần thực hiện commit nó sẽ tự động ghi và theo hướng tiến lên như hình sau: 
+  <img alt="GitHub Logo" src="/images/1.10.png"/></p>
+</li>
+<li>
+<p>Tạo một nhánh mới. Tạo ra một con trỏ mới cho phép di chuyển vòng quanh. Ví dụ tạo nhánh tên <code>testing</code>
+<div class="highlight"><pre><span></span><code>$ git branch testing
+</code></pre></div></p>
+</li>
+<li>
+<p>Nó sẽ tạo một con trỏ mới , cùng trỏ tới commit hiện tại như hình sau:
+  <img alt="GitHub Logo" src="/images/1.11.png"/></p>
+</li>
+<li>
+<p>Làm sao Git biết đang làm việc trên nhánh nào? Git giữ một con trỏ đặc biệt có tên <code>HEAD</code>. Trong Git đây là con trỏ tới nhánh nội bộ hiện đang làm việc. Như hình sau thì Git vẫn trỏ tới nhánh master:</p>
+</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/1.12.png"/></p>
+<ul>
+<li>Để chuyển sang một nhánh đang tồn tại, sử dụng lệnh <code>git checkout</code>. Chuyển sang nhánh testing mới:
+<div class="highlight"><pre><span></span><code>$ git checkout testing
+</code></pre></div></li>
+<li>
+<p>Lệnh này sẽ chuyển con trỏ HEAD sang nhánh testing như hình sau:
+  <img alt="GitHub Logo" src="/images/1.13.png"/></p>
+</li>
+<li>
+<p>Ý nghĩa của việc tạo nhánh mới là gì? Thử tạo một commit khác. Kết quả sau khi thực hiện:
+  <img alt="GitHub Logo" src="/images/1.14.png"/></p>
+</li>
+<li>
+<p>Nhánh mà HEAD trỏ tới di chuyển tiến lên phía trước theo commit. Thử chuyển lại nhánh Master
+<div class="highlight"><pre><span></span><code>$ git checkout master
+</code></pre></div></p>
+</li>
+<li>
+<p>HEAD sẽ chuyển sang nhánh khác khi checkout, như hình sau:
+ <img alt="GitHub Logo" src="/images/1.15.png"/></p>
+</li>
+<li>
+<p>Lệnh này di chuyển lại con trỏ về  nhánh <code>master</code> và sau đó phục hồi lại tập tin trong thư mục làm việc trở lại snapshot mà <code>master</code> trỏ tới. Và điều này có nghĩa là các thay đổi thực hiện từ thời điểm này trở đi sẽ tách ra so với phiên bản củ hơn của dự án.</p>
+</li>
+<li>
+<p>Hãy thử tạo ra một vài thay đổi và commit lại một lần nữa và kết quả như hình sau:
+ <img alt="GitHub Logo" src="/images/1.16.png"/></p>
+</li>
+</ul>
+<p>Lịch sử các nhánh đã bị phân tách. </p>
+<h2 id="co-ban-ve-phan-nhanh-va-tich-hop">Cơ bản về phân nhánh và tích hợp</h2>
+<ul>
+<li>Đầu tiên đang làm việc trên một dự án có một số commit từ trước như hình sau:</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/2.1.png"/></p>
+<ul>
+<li>Để tạo một nhánh tên iss53 và chuyển sang nhánh đó đồng thời, bạn có thể chạy lệnh <code>git checkout</code> với tham số -b:
+ <div class="highlight"><pre><span></span><code>$ git checkout -b iss53
+</code></pre></div></li>
+<li>Kết quả được như hình sau:</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/2.2.png"/></p>
+<ul>
+<li>Tiếp tục thực hiện một số commit trên đó. Làm cho nhánh <code>iss53</code> di chuyển tiến lên(Vì hiện tại HEAD đang trỏ tới nó) như hình sau:</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/2.3.png"/></p>
+<ul>
+<li>Nếu nhận ra có vấn đề cần khắc phục nó ngay lập tức. Với Git chỉ cần chuyển về lại nhánh <code>master</code>
+<div class="highlight"><pre><span></span><code>$ git checkout master
+</code></pre></div></li>
+<li>
+<p>Điểm quan trọng cần ghi nhớ là: Git khôi phục lại thư mục làm việc để nó giống như snapshot của commit mà nhánh hiện tại đang làm việc trỏ tới. Nó thêm, xóa, sửa các tập tin một cách tự động để đảm bảo rằng thư mục làm việc của bạn giống như lần commit cuối cùng.</p>
+</li>
+<li>
+<p>Tiếp theo cần phải sửa lỗi. Hãy tạo một nhánh để làm việc này cho tới khi được hoàn thành :
+<div class="highlight"><pre><span></span><code>$ git checkout -b hotfix
+</code></pre></div></p>
+</li>
+<li>Tiến hành tạo commit tiếp theo đã fix lỗi thành công trên <code>hotfix</code> và kết quả như hình sau:</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/2.4.png"/></p>
+<ul>
+<li>Sau khi chắc chắc rằng bản vá lỗi hoạt động đúng theo ý muốn, thì sau đó nên tích hợp nó lại nhánh chính để triển khai. Sử dụng lệnh <code>git merge</code> để làm việc này: 
+<div class="highlight"><pre><span></span><code>$ git checkout master
+$ git merge hotfix
+</code></pre></div></li>
+<li>Kết quả sẽ hiện thỉ cụm từ <code>Fast forward</code> trong lần tích hợp đó. Git sẽ đơn giản hóa bằng cách di chuyển con trỏ về phía trước vì không có sự rẻ nhánh nào để tích hợp.</li>
+<li>Thay đổi của bạn bây giờ ở trong snapshot của commit được trỏ tới bởi nhánh <code>master</code> và có triển khai thay đổi này như hình sau:</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/2.5.png"/></p>
+<ul>
+<li>
+<p>Sau triển khai này có thể xóa nhánh <code>hotfix</code> đi vì nhánh <code>master</code> cùng trỏ tới một điểm và không cần nhánh đó nữa:
+<div class="highlight"><pre><span></span><code>$ git checkout -d hotfix
+</code></pre></div></p>
+</li>
+<li>
+<p>Bây giờ bạn có thể chuyển tới nhánh <code>iss53</code> đang làm việc trước đó để tiếp tục làm việc:
+<div class="highlight"><pre><span></span><code>$ git checkout iss53
+</code></pre></div></p>
+</li>
+<li>Sau đó thực hiện <code>commit</code> để snapshot công việc đã làm, kết quả như hình sau:</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/2.6.png"/></p>
+<ul>
+<li>Nhánh <code>iss53</code> di chuyển về phía trước một cách độc lập.</li>
+<li>Giả sử quyết định việc giải quyết vấn đề iss53 đã hoàn thành và sẵn sàng để tích hợp vào nhánh <code>master</code>. Để làm điều này , cần phải tích hợp nhánh <code>iss53</code> lại. Cần ohai3 chuyển sang nhánh mà cần được tích hợp vào và chạy lệnh <code>git merge</code>:
+<div class="highlight"><pre><span></span><code>$git checkout master
+$git megre iss53
+</code></pre></div></li>
+<li>Lần này khác so với lần tích hợp <code>hotfix</code> trước đó. Git thực hiện một tích hợp 3 chiều, sử dụng hai snapshot được trỏ tới bởi các đầu node của nhánh và node cha chung cho cả hai. Vì commit trên nhánh <code>master</code> không phải là cha trực tiếp của nhánh <code>iss53</code> đang tích hợp vào.</li>
+<li>Hình ảnh sau mình họa ba snapshot mà Git sử dụng cho phép tích hợp này :</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/2.7.png"/></p>
+<ul>
+<li>Git tự động nhận dạng cha chung phù hợp nhất để tích hợp các nhánh với nhau.</li>
+<li>Thay vì việc chỉ di chuyển con trỏ về phía trước, Git tạo một snapshot mới được tích hợp từ lần tích hợp 3 chiều này và cũng tự tạo một commit mới trỏ tới nó. Nó được gọi là "commit tích hợp" vì nó đặc biệt có nhiều hơn 1 cha.</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/2.8.png"/> </p>
+<h2 id="quan-li-cac-nhanh">Quản lí các nhánh</h2>
+<ul>
+<li>Lệnh <code>git branch</code> khi không thêm tham số  nó sẽ hiển thị danh sách của tất cả các nhánh hiện tại:</li>
+</ul>
+<div class="highlight"><pre><span></span><code> $ git branch
+  iss53
+* master
+  testing
+</code></pre></div>
+<ul>
+<li>
+<p>Dấu * đứng trước cho biết tên nhánh <code>master</code> là nhánh mà HEAD đang trỏ tới nói cách khác là nhánh đang làm việc.</p>
+</li>
+<li>
+<p>Để xem commit mới nhất trên từng nhánh, chạy lệnh <code>git branch -v</code></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ git branch -v
+  iss53   93b412c fix javascript issue
+* master  7a98805 Merge branch 'iss53'
+  testing 782fd34 add scott to the author list in the readmes
+</code></pre></div>
+<ul>
+<li>Để biết nhánh nào đã được tích hợp vào nhánh hiện tại, sử dụng <code>git branch --merged</code> :</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ git branch --merged
+  iss53
+* master
+</code></pre></div>
+<ul>
+<li>Tương tự nhánh nào chưa được tích hơp với nhánh hiện tại, sử dụng <code>git branch --no-merged</code> :
+<div class="highlight"><pre><span></span><code>  $ git branch --no-merged
+  testing
+</code></pre></div></li>
+</ul>
+<h2 id="quy-trinh-lam-viec-phan-nhanh">Quy trình làm việc phân nhánh</h2>
+<h3 id="nhanh-lau-oi"><strong>Nhánh lâu đời</strong></h3>
+<ul>
+<li>
+<p>Git sử dụng tích hợp 3 chiều đơn giản, nên tích hợp từ nhánh này vào nhánh khác nhiều lần trong cùng một giai đoạn thường dễ dàng.</p>
+</li>
+<li>
+<p>Dựa theo phương pháp này, Chỉ chứa mã nguồn ổn định hoàn toàn ở nhánh <code>master</code> - hầu như là mã nguồn đã phát hành hoặc chuẩn bị phát hành. Có các nhánh song song khác như <code>develop</code> hay <code>topic</code> , nơi mà làm việc hoặc sử dụng để kiểm tra độ ổn định - nó không nhất thiết phải luôn luôn ổn định, tuy nhiên mổi khi nó đạt được trạng thái ổn định thì nó sẽ được tích hợp vào nhánh <code>master</code>.</p>
+</li>
+<li>
+<p>Trong thực tế, con trỏ di chuyể dọc theo đường thằng của các commit. Các nhánh ổn định hơn thường ở phía cuối của đường thẳng, các nhánh đang phát triển ở phía đầu hàng ,như hình sau:</p>
+</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/3.1.png"/></p>
+<ul>
+<li>
+<p>Nhánh ổn định hơn thường ở phía cuối hàng trong lịch sử commit.</p>
+</li>
+<li>
+<p>Có lẻ dễ hiểu hơn khi coi các nhánh là các xi-lô như trong hình sau:</p>
+</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/3.2.png"/> </p>
+<h3 id="nhanh-topic"><strong>Nhánh topic</strong></h3>
+<ul>
+<li>Một nhánh chủ đề là nhánh có vòng đời ngắn mà bạn tạo ra để phát triển một tính năng nào đó hoặc tương tự. </li>
+<li>
+<p>Kỹ thuật này cho phép bạn chuyển ngữ cảnh một cách nhanh chóng và toàn diện. Vì công việc của bạn tách biệt hoàn toàn ở các xi-lô nơi mà tất cả các thay đổi ở nhánh đó chỉ liên quan đến chủ để đó.</p>
+</li>
+<li>
+<p>Ví dụ về thực hiện một số công việc trên nhánh <code>master</code>, tạo nhánh giải quyết vấn đề <code>iss91</code> , làm việc trên đó một chút rùi tạo một nhánh thứ hai cùng giải quyết vấn đề đó nhưng theo cách khác <code>iss91v2</code> , quay chở lại <code>master</code> và làm việc trong một khoảng thời gian nhất định, sau đó tạo một nhánh <code>dumbidea</code>về một ý tưởng của bạn mà bạn không chắc đó là ý tưởng hay hay không. Lúc này lịch sử commit của bạn sẽ như hình sau:</p>
+</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/3.3.png"/></p>
+<ul>
+<li>Bây giờ bạn quyết định lựa chọn cách giải quyết <code>iss91v2</code> và ý kiến <code>dumbidea</code> là ý kiến hợp lý. Quyết định tích hợp hai commit này lại. Bỏ đi nhánh <code>isss91</code> (mất commit C5 và C6 ). Lịch sử commit bây giờ sẽ như hình sau:</li>
+</ul>
+<p><img alt="GitHub Logo" src="/images/3.4.png"/> </p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../KAFKA/" rel="prev" title="KAFKA">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                KAFKA
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../JENKINS/" rel="next" title="JENKINS">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                JENKINS
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            By azzor4k. Tài liệu tự overview lại! Nên có gì sai sai bỏ qua vui vẻ không quạo ^^
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/application.245445c6.js"></script>
+<script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+<script src="../../js/mermaid.min.js"></script>
+</body>
+</html>
