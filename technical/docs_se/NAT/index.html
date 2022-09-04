@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
+<link href="https://azzor4k.github.io/docs/docs_se/NAT/" rel="canonical"/>
+<meta content="Tài liệu tự overview lại!" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../../images/aZ4k_ico.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.4.0" name="generator"/>
+<title>NAT - aZ4k Docs</title>
+<link href="../../assets/stylesheets/application.0284f74d.css" rel="stylesheet"/>
+<script src="../../assets/javascripts/modernizr.74668098.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+<link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../../css/extra-material-theme.css" rel="stylesheet"/>
+<link href="../../css/code-tabs.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-135465513-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#nat" tabindex="1">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              aZ4k Docs
+            </span>
+<span class="md-header-nav__topic">
+              
+                NAT
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-icon md-search__icon" for="__search"></label>
+<button class="md-icon md-search__icon" data-md-component="reset" tabindex="-1" type="reset">
+        
+      </button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+            Type to start searching
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../ARP/" title="System Docs">
+          System Docs
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_nw/" title="Network Docs">
+        Network Docs
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_dev/" title="Dev Docs">
+          Dev Docs
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+    aZ4k Docs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      System Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+        System Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ARP/" title="ARP">
+      ARP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DHCP/" title="DHCP">
+      DHCP
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        NAT
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="NAT">
+      NAT
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tong-quan-ve-nat" title="Tổng quan về NAT">
+    Tổng quan về NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nhiem-vu-cua-nat" title="Nhiệm vụ của NAT">
+    Nhiệm vụ của NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mot-so-thuat-ngu" title="Một số thuật ngữ">
+    Một số thuật ngữ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phan-loai-nat" title="Phân loại NAT">
+    Phân loại NAT
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#static-nat" title="Static NAT">
+    Static NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamic-nat" title="Dynamic NAT">
+    Dynamic NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overloading-nat" title="Overloading NAT">
+    Overloading NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overlapping-nat" title="Overlapping NAT">
+    Overlapping NAT
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uu-nhuoc-iem-cua-nat" title="Ưu / Nhược điểm của NAT">
+    Ưu / Nhược điểm của NAT
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uu-iem" title="Ưu điểm">
+    Ưu điểm
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nhuoc-iem" title="Nhược điểm">
+    Nhược điểm
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SEMAPHORES/" title="SEMAPHORES">
+      SEMAPHORES
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HAPROXY/" title="HAPROXY">
+      HAPROXY
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../KAFKA/" title="KAFKA">
+      KAFKA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../GIT/" title="GIT">
+      GIT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JENKINS/" title="JENKINS">
+      JENKINS
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM/" title="JVM">
+      JVM
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM_MONITOR/" title="JVM MONITOR">
+      JVM MONITOR
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_nw/" title="Network Docs">
+      Network Docs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Dev Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+        Dev Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="PHP">
+      PHP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Python">
+      Python
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Golang">
+      Golang
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tong-quan-ve-nat" title="Tổng quan về NAT">
+    Tổng quan về NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nhiem-vu-cua-nat" title="Nhiệm vụ của NAT">
+    Nhiệm vụ của NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mot-so-thuat-ngu" title="Một số thuật ngữ">
+    Một số thuật ngữ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phan-loai-nat" title="Phân loại NAT">
+    Phân loại NAT
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#static-nat" title="Static NAT">
+    Static NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamic-nat" title="Dynamic NAT">
+    Dynamic NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overloading-nat" title="Overloading NAT">
+    Overloading NAT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overlapping-nat" title="Overlapping NAT">
+    Overlapping NAT
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uu-nhuoc-iem-cua-nat" title="Ưu / Nhược điểm của NAT">
+    Ưu / Nhược điểm của NAT
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uu-iem" title="Ưu điểm">
+    Ưu điểm
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nhuoc-iem" title="Nhược điểm">
+    Nhược điểm
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="nat">NAT</h1>
+<h2 id="tong-quan-ve-nat">Tổng quan về NAT</h2>
+<ul>
+<li>NAT (Network Address Translation) cho phép một hay nhiều địa chỉ IP nội miền được ánh xạ với một hay nhiều địa chỉ IP ngoại miền. </li>
+<li>Nói cách khác NAT giúp địa chỉ mạng cục bộ (Private) truy cập được đến mạng công cộng (Internet)</li>
+<li>NAT giống như một Router, chuyển tiếp các gói tin giữa những lớp mạng khác nhau trên một mạng lớn. </li>
+<li>NAT biên dịch hay thay đổi một hoặc cả hai địa chỉ bên trong một gói tin khi gói tin đó đi qua một Router, hay một số thiết bị khác. Thông thường NAT thường thay đổi địa chỉ thường là địa chỉ riêng (IP Private) của một kết nối mạng thành địa chỉ công cộng (IP Public).</li>
+</ul>
+<h2 id="nhiem-vu-cua-nat">Nhiệm vụ của NAT</h2>
+<ul>
+<li>NAT giống như một Router, chuyển tiếp các gói tin giữa những lớp mạng khác nhau trên một mạng lớn. NAT biên dịch hay thay đổi một hoặc cả hai địa chỉ bên trong một gói tin khi gói tin đó đi qua một Router, hay một số thiết bị khác. Thông thường NAT thường thay đổi địa chỉ thường là địa chỉ riêng (IP Private) của một kết nối mạng thành địa chỉ công cộng (IP Public).</li>
+<li>NAT cũng có thể coi như một Firewall (tường lửa) cơ bản. NAT duy trì một bảng thông tin về mỗi gói tin được gửi qua. Khi một máy tính trên mạng kết nối đến 1 website trên Internet header của địa chỉ IP nguồn được thay thế bằng địa chỉ Public đã được cấu hình sẵn trên NAT sever, sau khi có gói tin trở về NAT dựa vào bảng record mà nó đã lưu về các gói tin, thay đổi địa chỉ IP đích thành địa chỉ của PC trong mạng và chuyển tiếp đi. Thông qua cơ chế đó quản trị mạng có khả năng lọc các gói tin được gửi đến hay gửi từ một địa chỉ IP và cho phép hay ngăn truy cập đến một port cụ thể.</li>
+<li>NAT có nhiệm vụ truyền gói tin từ lớp mạng này sang lớp mạng khác trong cùng một hệ thống. NAT sẽ thực hiện thay đổi địa chỉ IP bên trong gói tin. Sau đó chuyển đi qua router và các thiết bị mạng.</li>
+<li>Trong giai đoạn gói tin được truyền từ mạng internet (public) quay trở lại NAT, NAT sẽ thực hiện nhiệm vụ thay đổi địa chỉ đích đến thành địa chỉ IP bên trong hệ thống mạng cục bộ và chuyển đi.</li>
+<li>NAT có thể đóng vai trò như là bức tường lửa. Nó giúp người dùng bảo mật được thông tin IP máy tính. Cụ thể, nếu máy tính gặp sự cố khi đang kết nối internet thì địa chỉ IP public (đã cấu hình trước đó) sẽ được hiển thị thay thế cho IP mạng cục bộ.</li>
+</ul>
+<h2 id="mot-so-thuat-ngu">Một số thuật ngữ</h2>
+<ul>
+<li>Địa chỉ inside local: là địa chỉ IP gán cho một thiết bị ở mạng bên trong. Địa chỉ này hầu như không phải địa chỉ được cung cấp bởi NIC (Network Information Center) hay nhà cung cấp dịch vụ.</li>
+<li>Địa chỉ inside global: là địa chỉ đã được đăng ký với NIC, dùng để thay thế một hay nhiều địa chỉ IP inside local.</li>
+<li>Địa chỉ outside local: là địa chỉ IP của một thiết bị bên ngoài khi nó xuất hiện bên trong mạng. Địa chỉ này không nhất thiết là địa chỉ được đăng ký, nó được lấy từ không gian địa chỉ bên trong.</li>
+<li>Địa chỉ outside global: là địa chỉ IP gán cho một thiết bị ở mạng bên ngoài. Địa chỉ này được lấy từ địa chỉ có thể dùng để định tuyến toàn cầu từ không gian địa chỉ mạng.</li>
+</ul>
+<h2 id="phan-loai-nat">Phân loại NAT</h2>
+<h3 id="static-nat">Static NAT</h3>
+<ul>
+<li>Static NAT (NAT tĩnh) là phương thức NAT một đôi một. Một IP Private sẽ được map với một IP Public.</li>
+<li>Đây là kỹ thuật được dùng để thay đổi, biến địa chỉ IP này thành địa chỉ IP khác, thông qua việc dùng một phương pháp cụ thể và cố định từ IP cục bộ sang IP Public. Tất cả quá trình này sẽ được thực hiện thủ công.</li>
+<li>Static NAT cực kỳ hiệu quả nếu sử dụng các thiết bị có IP cố định để truy cập internet bên ngoài.</li>
+</ul>
+<h3 id="dynamic-nat">Dynamic NAT</h3>
+<ul>
+<li>Một địa chỉ IP Private sẽ được map với một địa chỉ IP Public trong nhóm địa chỉ IP Public.</li>
+<li>Kỹ thuật này được dùng để thực hiện ánh xạ tự động một địa chỉ IP sang địa chỉ IP khác (còn được gọi là (one to one)). Thông thường, nó sẽ chuyển IP mạng cục bộ sang IP đã được đăng ký hợp lệ.</li>
+</ul>
+<h3 id="overloading-nat">Overloading NAT</h3>
+<ul>
+<li>NAT Overloading là một dạng thức của NAT động (Dynamic Overload). Nhiều địa chỉ IP Private sẽ được map với một địa chỉ IP Public qua các Port (cổng) khác nhau.</li>
+<li>Cũng giống như PAT (Port Address Translation), một địa chỉ NAT hoặc Port sẽ có nhiều mức độ NAT khác nhau.</li>
+<li>NAT Overload hay còn gọi là PAT (Port Address Translation). Nó chính là một dạng biến thể của Dynamic NAT. Vì thế, NAT Overload có khả năng thực hiện chuyển đổi địa chỉ IP tự động nhưng là chuyển đổi nhiều địa chỉ IP thành một IP, tức là dạng many to one. Đồng thời, nó sử dụng nhiều chỉ số port để phân biệt từng chuyển đổi.  </li>
+</ul>
+<h3 id="overlapping-nat">Overlapping NAT</h3>
+<ul>
+<li>Khi địa chỉ IP trong hệ thống mạng nội bộ là IP Public đang sử dụng trên một hệ thống mạng khác, Router phải duy trì một bảng tìm kiếm các địa chỉ này để ngăn và thay thế bằng một IP Public duy nhất.</li>
+<li>Điều quan trọng cần lưu ý rằng NAT router phải biên dịch địa chỉ "nội bộ" thành một địa chỉ IP Public duy nhất cũng như biên dịch địa chỉ "ngoài" thành một địa chỉ IP Private duy nhất. Bạn có thể sử dụng NAT tĩnh hoặc sử dụng kết hợp DNS và NAT động.</li>
+<li>Hệ thống mạng nội bộ thông thường là LAN, hay còn gọi là Stub Domain. Một Stub Domain là một LAN sử dụng địa chỉ IP nội bộ.</li>
+<li>Hầu hết các Network Traffic (là lưu lượng mạng ổn định, không bị gián đoạn trong quá trình truyền) trong Stub Domain mang tính chất cục bộ, do đó hệ thống mạng nội bộ không bao giờ bị lộ ra bên ngoài.</li>
+<li>Một Stub Domain có thể bao gồm cả địa chỉ IP Public và IP Private. Bất kỳ máy tính nào sử dụng địa chỉ IP Private đều phải dùng NAT để trao đổi thông tin với các máy tính khác.</li>
+<li>Trong phần tiếp theo Quản trị mạng sẽ giới thiệu cho bạn cấu hình NAT.</li>
+</ul>
+<h2 id="uu-nhuoc-iem-cua-nat">Ưu / Nhược điểm của NAT</h2>
+<h3 id="uu-iem">Ưu điểm</h3>
+<ul>
+<li>Tiết kiệm địa chỉ IPv4: Lượng người dùng truy cập internet ngày càng tăng cao. Điều này dẫn đến nguy cơ thiếu hụt địa chỉ IPv4. Kỹ thuật NAT sẽ giúp giảm thiểu được số lượng địa chỉ IP cần sử dụng.</li>
+<li>Giúp che giấu IP bên trong mạng LAN.</li>
+<li>NAT có thể chia sẻ kết nối internet cho nhiều máy tính, thiết bị di động khác nhau trong mạng LAN chỉ với một địa chỉ IP public duy nhất.</li>
+<li>NAT giúp nhà quản trị mạng lọc được các gói tin đến và xét duyệt quyền truy cập của IP public đến 1 port bất kỳ.</li>
+</ul>
+<h3 id="nhuoc-iem">Nhược điểm</h3>
+<ul>
+<li>Khi dùng kỹ thuật NAT, CPU sẽ phải kiểm tra và tốn thời gian để thay đổi địa chỉ IP. Điều này làm tăng độ trễ trong quá trình switching. Làm ảnh hưởng đến tốc độ đường truyền của mạng internet.</li>
+<li>NAT có khả năng che giấu địa chỉ IP trong mạng LAN nên kỹ thuật viên sẽ gặp khó khăn khi cần kiểm tra nguồn gốc IP hoặc truy tìm dấu vết của gói tin.</li>
+<li>NAT giấu địa chỉ IP nên sẽ khiến cho 1 vài ứng dụng cần sử dụng IP không thể hoạt động được.</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../DHCP/" rel="prev" title="DHCP">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                DHCP
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../SEMAPHORES/" rel="next" title="SEMAPHORES">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SEMAPHORES
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            By azzor4k. Tài liệu tự overview lại! Nên có gì sai sai bỏ qua vui vẻ không quạo ^^
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/application.245445c6.js"></script>
+<script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+<script src="../../js/mermaid.min.js"></script>
+</body>
+</html>

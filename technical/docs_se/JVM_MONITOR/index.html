@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
+<link href="https://azzor4k.github.io/docs/docs_se/JVM_MONITOR/" rel="canonical"/>
+<meta content="Tài liệu tự overview lại!" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../../images/aZ4k_ico.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.4.0" name="generator"/>
+<title>JVM MONITOR - aZ4k Docs</title>
+<link href="../../assets/stylesheets/application.0284f74d.css" rel="stylesheet"/>
+<script src="../../assets/javascripts/modernizr.74668098.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+<link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../../css/extra-material-theme.css" rel="stylesheet"/>
+<link href="../../css/code-tabs.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-135465513-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#jvm-monitoring" tabindex="1">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              aZ4k Docs
+            </span>
+<span class="md-header-nav__topic">
+              
+                JVM MONITOR
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-icon md-search__icon" for="__search"></label>
+<button class="md-icon md-search__icon" data-md-component="reset" tabindex="-1" type="reset">
+        
+      </button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+            Type to start searching
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../ARP/" title="System Docs">
+          System Docs
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_nw/" title="Network Docs">
+        Network Docs
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_dev/" title="Dev Docs">
+          Dev Docs
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+    aZ4k Docs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      System Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+        System Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ARP/" title="ARP">
+      ARP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DHCP/" title="DHCP">
+      DHCP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../NAT/" title="NAT">
+      NAT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SEMAPHORES/" title="SEMAPHORES">
+      SEMAPHORES
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HAPROXY/" title="HAPROXY">
+      HAPROXY
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../KAFKA/" title="KAFKA">
+      KAFKA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../GIT/" title="GIT">
+      GIT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JENKINS/" title="JENKINS">
+      JENKINS
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM/" title="JVM">
+      JVM
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        JVM MONITOR
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="JVM MONITOR">
+      JVM MONITOR
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jvm-monitoring-tich-hop-voi-eclipse" title="JVM Monitoring tích hợp với Eclipse">
+    JVM Monitoring tích hợp với Eclipse
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-attributes-in-timelines" title="Monitoring attributes in timelines">
+    Monitoring attributes in timelines
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-threads" title="Monitoring threads">
+    Monitoring threads
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-memory-useage" title="Monitoring memory useage">
+    Monitoring memory useage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-cpu-useage" title="Monitoring CPU useage">
+    Monitoring CPU useage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-mbeans-atrtibutes" title="Monitoring MBeans Atrtibutes">
+    Monitoring MBeans Atrtibutes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-jvm-on-remote-host" title="Monitoring JVM on remote host">
+    Monitoring JVM on remote host
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#thong-so-uoc-theo-doi-cua-jvm" title="Thông số được theo dõi của JVM">
+    Thông số được theo dõi của JVM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tool-theo-doi-jvm" title="Tool theo dõi JVM">
+    Tool theo dõi JVM
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jps" title="jps">
+    jps
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jstat" title="jstat">
+    jstat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jconsole" title="jconsole">
+    jconsole
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_nw/" title="Network Docs">
+      Network Docs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Dev Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+        Dev Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="PHP">
+      PHP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Python">
+      Python
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Golang">
+      Golang
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jvm-monitoring-tich-hop-voi-eclipse" title="JVM Monitoring tích hợp với Eclipse">
+    JVM Monitoring tích hợp với Eclipse
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-attributes-in-timelines" title="Monitoring attributes in timelines">
+    Monitoring attributes in timelines
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-threads" title="Monitoring threads">
+    Monitoring threads
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-memory-useage" title="Monitoring memory useage">
+    Monitoring memory useage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-cpu-useage" title="Monitoring CPU useage">
+    Monitoring CPU useage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-mbeans-atrtibutes" title="Monitoring MBeans Atrtibutes">
+    Monitoring MBeans Atrtibutes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitoring-jvm-on-remote-host" title="Monitoring JVM on remote host">
+    Monitoring JVM on remote host
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#thong-so-uoc-theo-doi-cua-jvm" title="Thông số được theo dõi của JVM">
+    Thông số được theo dõi của JVM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tool-theo-doi-jvm" title="Tool theo dõi JVM">
+    Tool theo dõi JVM
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jps" title="jps">
+    jps
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jstat" title="jstat">
+    jstat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jconsole" title="jconsole">
+    jconsole
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="jvm-monitoring">JVM - Monitoring</h1>
+<h2 id="jvm-monitoring-tich-hop-voi-eclipse">JVM Monitoring tích hợp với Eclipse</h2>
+<h3 id="monitoring-attributes-in-timelines">Monitoring attributes in timelines</h3>
+<p>Theo dõi thuộc tính trong dòng thời gian:</p>
+<ul>
+<li>Theo dõi cụ thể  trend của bộ nhớ heap đã sử dụng.</li>
+<li>Theo dõi số lượng class đã tải.</li>
+<li>Theo dõi số lượng thread và mức sử dụng CPU trên biểu đồ theo mặc định.</li>
+</ul>
+<h3 id="monitoring-threads">Monitoring threads</h3>
+<p>Theo dõi luồng:</p>
+<ul>
+<li>Theo dõi các danh sách các thread và các ngăn xếp stack trace</li>
+</ul>
+<h3 id="monitoring-memory-useage">Monitoring memory useage</h3>
+<p>Theo dõi mức sử dụng bộ nhớ:</p>
+<ul>
+<li>Theo dõi dạng biểu đồ heap hiển thị kích thước(Size-bytes) đối tượng và số đối tượng(Count) cho mỗi class.</li>
+</ul>
+<h3 id="monitoring-cpu-useage">Monitoring CPU useage</h3>
+<p>Theo dõi mức sữ dụng CPU</p>
+<h3 id="monitoring-mbeans-atrtibutes">Monitoring MBeans Atrtibutes</h3>
+<p>Theo dõi thuộc tính MBeans</p>
+<h3 id="monitoring-jvm-on-remote-host">Monitoring JVM on remote host</h3>
+<p>Theo dõi JVM trên các máy chủ được theo dõi</p>
+<h2 id="thong-so-uoc-theo-doi-cua-jvm">Thông số được theo dõi của JVM</h2>
+<p>Các thông số cần được theo dõi như:</p>
+<ul>
+<li>
+<p>Usage Memory
+  Chủ yếu đo lường</p>
+<ul>
+<li>Heap memory: là vùng nhớ lưu trữ dữ liệu runtime mặc định mà các đối tượng được khởi tạo </li>
+<li>Non heap memory: lưu trữ cấu trúc cho mỗi lớp như là pool hằng số runtime, field, phương thức, và code cho các phương thức và các hàm khởi tạo cũng như chuổi nội bộ. Tạo ra từ JVM startup.</li>
+</ul>
+</li>
+<li>
+<p>Usage CPU:
+  Đo lường mức độ sử dụng tài nguyên CPU trên máy chứa JVM.</p>
+</li>
+<li>
+<p>Garbage Collection:</p>
+<ul>
+<li>Quá trình thu gom gác trong JVM là quá trình xác định và loại bỏ Object không được sử dụng khỏi bộ nhớ Heap. Không gian trống này sẽ cấp phát cho object mới.</li>
+<li>Garbage collector là chương trình chạy nền, nó theo dõi toàn bộ object trong Heap và tìm ra những object nào không reference đến nó và xóa bỏ.</li>
+</ul>
+</li>
+<li>
+<p>Quá trình thu gom gác gồm 3 bước sau:</p>
+<ul>
+<li>Marking: Là bước đánh dấu object còn sử dụng và không sử dụng</li>
+<li>Normal deleting : Garbage collection sẽ xóa các object không còn sử dụng.</li>
+<li>Delection with compacting : Sau khi những object không còn được sử dụng bị xóa, thì những object còn  được sử dụng sẽ được gom lại gần nhau =&gt; tăng hiệu suất sử dụng bộ nhớ trống để cấp phát cho những object mới.</li>
+</ul>
+</li>
+</ul>
+<p>Để thực hiện việc tự giải phóng các object khi chúng không sử dụng nữa thì bộ nhớ Heap được chia nhỏ thành các thành phần sau:</p>
+<p><img alt="GitHub Logo" src="/images/GC.png"/></p>
+<ul>
+<li>Young generation(YG): Là nơi chứ toàn bộ object mới được khởi tạo. Khi vùng nhớ YG đầy thì gagbage collector
+là Minor GC hoạt động. YG chia nhỏ thành Eden, survivor S0, S1. Ban đầu object mới tạo ở Eden khi Eden đầy
+thì Minor GC chuyển chúng sang S0, S1.</li>
+<li>Sau nhiều chu kì quét mà object vần còn được sử dụng thì chúng sẽ được chuyển sang vùng nhớ Old generation.</li>
+<li>Old generation được quản lý bởi Garbage collector khác Major GC.</li>
+<li>Perm (permanent generation) không phải là một phần của Heap. Nó không chứa object, nó chứ metedata
+của JVM như thư viện Java SE, class, method,...</li>
+</ul>
+<p>Dữ liệu được quan tâm:</p>
+<ul>
+<li>Kích thước của Java Heap</li>
+<li>Kích thước của vùng young generation, old generation, permanent generation</li>
+<li>Thời gian và tần suất thực thực hiện và dung lượng vùng nhớ thu hồi được từ minor garbage collection và major garbage collection</li>
+<li>Kích hoạt quá trình thu dọn toàn bộ phụ thuộc vào sự chiếm giữ vùng nhớ của old generation hay permanent generation</li>
+<li>JIT compilation</li>
+<li>Class loading</li>
+</ul>
+<p>Bên trong các thông số được theo dõi chi tiết theo:</p>
+<ul>
+<li>Heap</li>
+<li>Non-Heap</li>
+<li>Classs</li>
+<li>Threads</li>
+<li>Sessions</li>
+</ul>
+<h2 id="tool-theo-doi-jvm">Tool theo dõi JVM</h2>
+<p>JDK có hỗ trợ các công cụ dùng để theo dõi JVM:</p>
+<h3 id="jps">jps</h3>
+<p>Là tool hỗ trợ tìm kiếm các process java đang hoạt động và hiển thị pid tương ứng.</p>
+<h3 id="jstat">jstat</h3>
+<p>Là công cụ dòng lệnh hiển thị thống kê hiệu năng chi tiết về một HotSpot VM cục bộ hoặc từ xa
+<a href="https://docs.oracle.com/javase/7/docs/technotes/tools/share/jstat.html">jstat - Java Virtual Machine Statistics Monitoring Tool</a></p>
+<p><code>jstat  -statOption -vmid -[interval[s|ms] -[count]]</code></p>
+<p>Các statOption của jstat các thông số như:</p>
+<ul>
+<li>class: Thống kê về hành vi của quá trình class loader</li>
+<li>compiler: Thống kê về hành vi của trình biên dịch JIT của HotSpot</li>
+<li>gc: Thống kê về hành vi bộ nhớ heap của quá trình dọn gác </li>
+<li>gccapacity: Thống kê về sức chứa của các generation và không gian tương ứng của chúng</li>
+<li>gccause: Tóm tắt các số liệu thống kê thu dọn gác(giống như -gcutil)</li>
+<li>gcnew: Thống kê về hành vi của generation mới</li>
+<li>gcnewcapacity: Thống kê về kích thước của các generation mới và không gian tương ứng của nó</li>
+<li>gcold: Thống kê về hành vi của old và permanent generation</li>
+<li>gcoldcapacity: Thống kê về kích thước của old generation</li>
+<li>gcpermcapacity: Thống kê về kích thước của permanent generation</li>
+<li>gcutil: Tóm tắt số liệu thống kê thu dọn gác</li>
+<li>printcompilation: HotSpot thống kê phương pháp biên dịch.</li>
+</ul>
+<p>Ví dụ: Phần này trình bày một số ví dụ về việc giám sát một JVM cục bộ với một lvmid 21891.</p>
+<p>jstat -gcutil 21891 250 7
+<div class="highlight"><pre><span></span><code>S0     S1     E      O      P     YGC    YGCT    FGC    FGCT     GCT
+
+ 12.44   0.00  27.20   9.49  96.70    78    0.176     5    0.495    0.672
+
+ 12.44   0.00  62.16   9.49  96.70    78    0.176     5    0.495    0.672
+
+ 12.44   0.00  83.97   9.49  96.70    78    0.176     5    0.495    0.672
+
+  0.00   7.74   0.00   9.51  96.70    79    0.177     5    0.495    0.673
+
+  0.00   7.74  23.37   9.51  96.70    79    0.177     5    0.495    0.673
+
+  0.00   7.74  43.82   9.51  96.70    79    0.177     5    0.495    0.673
+
+  0.00   7.74  58.11   9.51  96.71    79    0.177     5    0.495    0.673
+</code></pre></div></p>
+<p>Đây là giám sát theo statOption -gcutil thống kê tóm tắt số liệu thu dọn gác.</p>
+<ul>
+<li>S0, S1, E, 0, P:  là thông năng sử dụng hiện tại của Survivor space 0, 1, Eden space, Old space, Old space
+ tính theo phần trăm (%).</li>
+<li>YGC: Số lần diễn ra GC ở Young Generation. (Minor GC)</li>
+<li>YGCT(YG garbage collection time): Thời gian diễn ra Minor GC.</li>
+<li>FGC: Số lần diễn ra  full GC.</li>
+<li>GCT: Tổng thời gian dọn gác.</li>
+</ul>
+<h3 id="jconsole">jconsole</h3>
+<p>Là tool theo dõi được tích hợp sẵn trong JDK có giao diện đồ họa để theo dõi JVM như:</p>
+<blockquote>
+<p>Overview(Tổng quát)</p>
+</blockquote>
+<p><img alt="GitHub Logo" src="/images/jconsole_overview.png"/></p>
+<blockquote>
+<p>Memory</p>
+</blockquote>
+<p><img alt="GitHub Logo" src="/images/jconsole_memory.png"/></p>
+<blockquote>
+<p>Classs</p>
+</blockquote>
+<p><img alt="GitHub Logo" src="/images/jconsole_classes.png"/></p>
+<blockquote>
+<p>Threads</p>
+</blockquote>
+<p><img alt="GitHub Logo" src="/images/jconsole_threads.png"/></p>
+<blockquote>
+<p>Mbean</p>
+</blockquote>
+<p>Mbean (managed bean) là một đối tượng Java mô tả cho tài nguyên có thể quản lý, chẳng hạn như ứng dụng
+, dịch vụ, thành phần, hoặc thiết bị.</p>
+<p><img alt="GitHub Logo" src="/images/jconsole_mbean.png"/></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../JVM/" rel="prev" title="JVM">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                JVM
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../../docs_nw/" rel="next" title="Network Docs">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Network Docs
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            By azzor4k. Tài liệu tự overview lại! Nên có gì sai sai bỏ qua vui vẻ không quạo ^^
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/application.245445c6.js"></script>
+<script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+<script src="../../js/mermaid.min.js"></script>
+</body>
+</html>

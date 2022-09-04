@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
+<link href="https://azzor4k.github.io/docs/docs_se/SEMAPHORES/" rel="canonical"/>
+<meta content="Tài liệu tự overview lại!" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../../images/aZ4k_ico.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-4.4.0" name="generator"/>
+<title>SEMAPHORES - aZ4k Docs</title>
+<link href="../../assets/stylesheets/application.0284f74d.css" rel="stylesheet"/>
+<script src="../../assets/javascripts/modernizr.74668098.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+<link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../../css/extra-material-theme.css" rel="stylesheet"/>
+<link href="../../css/code-tabs.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-135465513-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#semaphores" tabindex="1">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              aZ4k Docs
+            </span>
+<span class="md-header-nav__topic">
+              
+                SEMAPHORES
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-icon md-search__icon" for="__search"></label>
+<button class="md-icon md-search__icon" data-md-component="reset" tabindex="-1" type="reset">
+        
+      </button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+            Type to start searching
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../ARP/" title="System Docs">
+          System Docs
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_nw/" title="Network Docs">
+        Network Docs
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../docs_dev/" title="Dev Docs">
+          Dev Docs
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<i class="md-icon"></i>
+</a>
+    aZ4k Docs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      System Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+        System Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ARP/" title="ARP">
+      ARP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DHCP/" title="DHCP">
+      DHCP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../NAT/" title="NAT">
+      NAT
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        SEMAPHORES
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="SEMAPHORES">
+      SEMAPHORES
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semaphores-la-gi" title="Semaphores là gì?">
+    Semaphores là gì?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semaphore-co-cau-tao-nhu-the-nao" title="Semaphore có cấu tạo như thế nào?">
+    Semaphore có cấu tạo như thế nào?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semaphore-hoat-ong-ra-sao" title="Semaphore hoạt động ra sao?">
+    Semaphore hoạt động ra sao?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semaphore-bao-ve-critical-resource-nhu-the-nao" title="Semaphore bảo vệ critical resource như thế nào?">
+    Semaphore bảo vệ critical resource như thế nào?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tham-so-kernel-e-set-semaphore-limits" title="Tham số  Kernel  để set semaphore limits">
+    Tham số  Kernel  để set semaphore limits
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#thay-oi-semaphore-limits" title="Thay đổi Semaphore Limits">
+    Thay đổi Semaphore Limits
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ket-luan-semephore-kernel" title="Kết luận semephore kernel">
+    Kết luận semephore kernel
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HAPROXY/" title="HAPROXY">
+      HAPROXY
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../KAFKA/" title="KAFKA">
+      KAFKA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../GIT/" title="GIT">
+      GIT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JENKINS/" title="JENKINS">
+      JENKINS
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM/" title="JVM">
+      JVM
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JVM_MONITOR/" title="JVM MONITOR">
+      JVM MONITOR
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_nw/" title="Network Docs">
+      Network Docs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Dev Docs
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+        Dev Docs
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="PHP">
+      PHP
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Python">
+      Python
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs_dev/" title="Golang">
+      Golang
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semaphores-la-gi" title="Semaphores là gì?">
+    Semaphores là gì?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semaphore-co-cau-tao-nhu-the-nao" title="Semaphore có cấu tạo như thế nào?">
+    Semaphore có cấu tạo như thế nào?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semaphore-hoat-ong-ra-sao" title="Semaphore hoạt động ra sao?">
+    Semaphore hoạt động ra sao?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semaphore-bao-ve-critical-resource-nhu-the-nao" title="Semaphore bảo vệ critical resource như thế nào?">
+    Semaphore bảo vệ critical resource như thế nào?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tham-so-kernel-e-set-semaphore-limits" title="Tham số  Kernel  để set semaphore limits">
+    Tham số  Kernel  để set semaphore limits
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#thay-oi-semaphore-limits" title="Thay đổi Semaphore Limits">
+    Thay đổi Semaphore Limits
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ket-luan-semephore-kernel" title="Kết luận semephore kernel">
+    Kết luận semephore kernel
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="semaphores">SEMAPHORES</h1>
+<h2 id="semaphores-la-gi">Semaphores là gì?</h2>
+<ul>
+<li>Ngoài spinlock và mutex lock, ta cũng có thể áp dụng kỹ thuật semaphore để bảo vệ dữ liệu trong critical resource.</li>
+<li>Semaphore là một cấu trúc dữ liệu, được dùng để đồng bộ tài nguyên và đồng bộ hoạt động.</li>
+<li>Semaphores trong linux kernel là một “sleeping lock”. </li>
+<li>Có nghĩa là, cơ chế hoạt động của semaphores tương tự như với spin lock, cùng khóa dữ liệu lại khi đang sử dụng để tránh luồng thực thi khác truy cập đồng thời. </li>
+<li>Nhưng thay vì phải liên tục kiểm tra xem lock đã được mở chưa – chiếm dụng CPU trong suốt thời gian chờ lock, tiến trình sử dụng semaphores sẽ sleeping – ngủ, giải phóng CPU cho tới khi lock được mở, tiến trình đó sẽ được gọi dậy thực thi tiếp.</li>
+</ul>
+<h2 id="semaphore-co-cau-tao-nhu-the-nao">Semaphore có cấu tạo như thế nào?</h2>
+<ul>
+<li>Semaphore gồm 2 thành phần chính: biến count và hàng đợi wait_list. Linux kernel sử dụng cấu trúc semaphore để biểu diễn một semaphore.</li>
+<li>Căn cứ vào giá trị của biến count, semaphore được chia làm 2 loại là counting semaphore và binary semaphore.<ul>
+<li>Nếu giá trị cực đại của biến count lớn hơn 1, thì semaphore được gọi là counting semaphore. Giá trị cực đại của biến count thể hiện số lượng thread tối đa được phép sử dụng critical resource tại cùng một thời điểm.</li>
+<li>Nếu biến count chỉ có hai giá trị 0 và 1, thì semaphore được gọi là binary semaphore. Binary semaphore có một số nét tương đồng với mutex lock.</li>
+</ul>
+</li>
+</ul>
+<h2 id="semaphore-hoat-ong-ra-sao">Semaphore hoạt động ra sao?</h2>
+<ul>
+<li>Khi count đang lớn hơn 0, tức là semaphore đang ở trạng thái AVAILABLE, nếu một thread gọi hàm down, thì biến count bị giảm đi 1 đơn vị (nếu hiệu bằng 0 thì semaphore chuyển sang trạng thái UNAVAILABLE). Sau đó, CPU bắt đầu thực thi critical section của thread (nói theo ngôn ngữ của CPU), hay thread bắt đầu sử dụng critical resource (nói theo ngôn ngữ của Linux kernel).</li>
+<li>Khi count đang bằng 0, tức là semaphore đang ở trạng thái UNAVAILABLE, nếu một thread gọi hàm down, thì CPU tạm dừng thực thi thread này rồi chuyển sang thực thi thread khác (nói theo ngôn ngữ của CPU). Hay nói theo ngôn ngữ của Linux kernel, thread đó được thêm vào hàng đợi wait_list và đi ngủ, sau đó Linux kernel sẽ lập lịch cho thread khác. Do đó, ta nói rằng, semaphore áp dụng cơ chế sleep-waiting.</li>
+<li>Khi wait_list vẫn còn ít nhất một thread đang phải đợi, nếu một thread A gọi hàm up, thì CPU sẽ chuyển sang thực thi thread B nằm ở vị trí đầu tiên trong hàng đợi wait_list (nói theo ngôn ngữ của CPU). Hay nói theo ngôn ngữ của Linux kernel, Linux kernel đánh thức thread B dậy, sau đó thread B bắt đầu sử dụng critical resource.</li>
+<li>Khi wait_list không còn thread nào chờ đợi, nếu một thread gọi hàm up, thì biến count được tăng thêm 1 đơn vị, tức là semaphore chuyển sang trạng thái AVAILABLE.</li>
+</ul>
+<h2 id="semaphore-bao-ve-critical-resource-nhu-the-nao">Semaphore bảo vệ critical resource như thế nào?</h2>
+<ul>
+<li>Vì hoạt động của binary semaphore tương tự như mutex lock, nên loại semaphore này thường được sử dụng để đồng bộ dữ liệu, phòng tránh race condition. Trong khi lập trình device driver, ta đặt hàm down và up lần lượt vào trước và sau critical section của mỗi thread.</li>
+<li>
+<p>Giả sử, hệ thống có kernel thread A và B được thực thi riêng biệt trên 2 lõi CPU0 và CPU1. Cả 2 thread đều có nhu cầu sử dụng critical resource R, và tài nguyên R được bảo vệ bằng binary semaphore S. Xét 2 trường hợp:</p>
+<ul>
+<li>Trường hợp 1: A muốn truy cập R trong khi B đang truy cập R.</li>
+<li>Trước khi thực thi các lệnh trong critical section của thread A, CPU0 sẽ thực thi hàm down và thấy rằng S đang ở trạng thái UNAVAILABLE. Khi đó, CPU0 sẽ tạm dừng thực thi thread A rồi chuyển sang thực thi một thread C nào đó.</li>
+<li>Sau khi thực thi xong critical section của thread B, CPU1 thực thi tiếp hàm up để đánh thức thread A dậy và CPU0 tiếp tục thực thi thread A.</li>
+<li>Trường hợp 2: cả A và B đồng thời muốn truy cập R.</li>
+<li>Khi đó, cả 2 thread đồng thời thực thi hàm down. Tuy nhiên, do semaphore được bảo vệ bằng một spinlock, nên chỉ có một trong hai thread chiếm được S.</li>
+<li>Thread nào chiếm được S trước thì sẽ sử dụng R trước. Thread nào không chiếm được S thì sẽ đi ngủ cho đến khi thread đầu tiên sử dụng xong R.</li>
+<li>Như vậy, tại bất cứ thời điểm nào, tối đa chỉ có một thread được phép chiếm dụng binary semaphore, đồng nghĩa với việc, tối đa chỉ có một thread được phép sử dụng critical resource. Do đó, race condition sẽ không xảy ra và critical resource được bảo vệ.</li>
+</ul>
+</li>
+</ul>
+<h2 id="tham-so-kernel-e-set-semaphore-limits">Tham số  Kernel  để set semaphore limits</h2>
+<ul>
+<li>kernel.sem = SEMMSL SEMMNS SEMOPM SEMMNI</li>
+<li>SEMMSL - max semaphores per array</li>
+<li>SEMMNS - max semaphores system wide</li>
+<li>SEMOPM - max ops per semop call</li>
+<li>SEMMNI - max number of arrays</li>
+</ul>
+<h2 id="thay-oi-semaphore-limits">Thay đổi Semaphore Limits</h2>
+<ul>
+<li>
+<p>Nếu một giới hạn cần được thay đổi, cần tính đến điều đó (max number of arrays)*(max semaphores per array) &gt;= (max semaphores system-wide). Không cần có nhiều semaphores trên system-wided nếu bị giới hạn bởi số lượng mảng có thể có với số lượng semaphores tối đa cho mỗi nó.</p>
+</li>
+<li>
+<p>Ví dụ:
+<div class="highlight"><pre><span></span><code>sysctl -a| grep kernel.sem
+kernel.sem = 250 32000 32 128
+</code></pre></div></p>
+</li>
+<li>
+<p>Trong ví dụ trên , cần phải tăng giá trị max semaphores per array limit từ 128 lên 192. Giá trị max semaphores system-wide cũng có thể được tăng lên đến  48000 ( 250*192 = 48000 &gt;= 32000) hoặc giữ tại 32000. 
+Trong trường hợp này, nó được giữ ở mức 32000.</p>
+</li>
+<li>
+<p>Để đặt tham số  kenrnel , tức là không cần khởi động lại máy chủ.
+<div class="highlight"><pre><span></span><code>sysctl -w kernel.sem="250 32000 32 192"
+kernel.sem = 250 32000 32 192
+</code></pre></div></p>
+</li>
+<li>
+<p>Nếu tất cả đều ổn với hệ thống như mong đợi, hãy sửa đổi tham số  kernel bằng cách thêm nó vào tệp /etc/sysctl.conf để đảm bảo giá trị vẫn tồn tại sau khi máy chủ khởi động lại.
+<div class="highlight"><pre><span></span><code>cat /etc/sysctl.conf | grep kernel.sem
+kernel.sem = 250 32000 32 192
+</code></pre></div></p>
+</li>
+</ul>
+<p>Nếu  chọn set tham số semaphore trực tiếp trong tệp mà không sử dụng sysctl -w, bạn sẽ cần tải lại tệp:
+<div class="highlight"><pre><span></span><code>sysctl -p
+</code></pre></div></p>
+<ul>
+<li>Có thể xác minh các giới hạn hiện được đặt bởi:
+<div class="highlight"><pre><span></span><code>ipcs -ls
+------ Semaphore Limits --------
+max number of arrays = 192
+max semaphores per array = 250
+max semaphores system wide = 32000
+max ops per semop call = 32
+semaphore max value = 32767
+</code></pre></div></li>
+</ul>
+<h2 id="ket-luan-semephore-kernel">Kết luận semephore kernel</h2>
+<ul>
+<li>Một semaphore giống như một bộ đếm được sử dụng để kiểm soát quyền truy cập vào các tài nguyên được chia sẻ bởi nhiều tiến trình. </li>
+<li>Nó thường được sử dụng như một cơ chế khóa để ngăn các tiến trình truy cập vào một tài nguyên cụ thể trong khi một tiến trình khác đang thực hiện các hoạt động trên đó. </li>
+<li>Giá trị Semaphore có thể được tăng hoặc giảm cho đến khi được đặt tối đa bởi biến SEMVMX, "giá trị tối đa của semaphore".</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../NAT/" rel="prev" title="NAT">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                NAT
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../HAPROXY/" rel="next" title="HAPROXY">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                HAPROXY
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            By azzor4k. Tài liệu tự overview lại! Nên có gì sai sai bỏ qua vui vẻ không quạo ^^
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/application.245445c6.js"></script>
+<script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+<script src="../../js/mermaid.min.js"></script>
+</body>
+</html>
