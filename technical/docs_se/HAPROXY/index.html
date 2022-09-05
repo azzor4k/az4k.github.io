@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
-<link href="https://azzor4k.github.io/docs/docs_se/HAPROXY/" rel="canonical"/>
+<link href="https://azzor4k.github.io/technical/docs_se/HAPROXY/" rel="canonical"/>
 <meta content="Tài liệu tự overview lại!" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../images/aZ4k_ico.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.4.0" name="generator"/>
-<title>HAPROXY - aZ4k Docs</title>
+<title>HAPROXY - aZ4k Technical Docs</title>
 <link href="../../assets/stylesheets/application.0284f74d.css" rel="stylesheet"/>
 <script src="../../assets/javascripts/modernizr.74668098.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -69,7 +69,7 @@
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/technical/" title="aZ4k Technical Docs">
 <i class="md-icon"></i>
 </a>
 </div>
@@ -79,7 +79,7 @@
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
 <span class="md-header-nav__topic">
-              aZ4k Docs
+              aZ4k Technical Docs
             </span>
 <span class="md-header-nav__topic">
               
@@ -145,10 +145,10 @@
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title md-nav__title--site" for="__drawer">
-<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/technical/" title="aZ4k Technical Docs">
 <i class="md-icon"></i>
 </a>
-    aZ4k Docs
+    aZ4k Technical Docs
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -484,7 +484,7 @@ frontend forum
 <ul>
 <li>Xử lí dữ liệu tìm thấy trong các giao thức layer Network và Transport. Layer 4 loadbalancer chỉ đơn giản là chuyển tiếp gói tin dữ liệu mạng đến và đi từ các máy chủ mà không kiểm tra nội dung của các gói dữ liệu.</li>
 <li>Cách đơn giản nhất có thể loadbalacing đến nhiều web server là sử dụng loadbalacing trêng layer 4 này. Các request sẽ được điều hướng dựa trên địa chỉ IP + port. Ví dụ req "https:/az4k.site/docs" sẽ được chuyển hướng đến backend được dùng cho điều hướng domain az4k.site với cỗng port 443.
-  <img alt="Layer 4" src="/images/haproxy_layer4.png"/></li>
+  <img alt="Layer 4" src="/technical/images/haproxy_layer4.png"/></li>
 </ul>
 </li>
 <li>
@@ -492,7 +492,7 @@ frontend forum
 <ul>
 <li>Phân phối yêu cầu dựa trên dữ liệu tìm thấy trong layer, như HTTP. Layer 7 loadbalancer điều phối lưu lượng theo một cách chi tiết hơn so với layer 4. Một loadbalacer chấm dứt kết nối mạng lưới transport và đọc message bên trong. Nó có thể quyết định cân bằng tải dựa trên nội dung của data. Sau đó tạo mới một kết nối TCP đến máy chủ đã chọn hoặc tái sử dụng nếu có sẵn HTTP keepalives và tạo yêu cầu đến máy chủ.</li>
 <li>Sử dụng loadbalacing ở layer 7. Có thể điều hướng request dựa trên nội dung request đó. Với loadbalacing layer 7, nhiều backend có thể được sử dụng cho cùng một domain + port. Ví dụ req "https:/az4k.site/docs". Request đó sẽ được điều hướng đến backend xử ký cho docs.
-  <img alt="Layer 7" src="/images/haproxy_layer7.png"/></li>
+  <img alt="Layer 7" src="/technical/images/haproxy_layer7.png"/></li>
 </ul>
 </li>
 </ul>

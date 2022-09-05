@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Nên sai bỏ qua vui vẻ không quạo ^^" name="description"/>
-<link href="https://azzor4k.github.io/docs/docs_se/JENKINS/" rel="canonical"/>
+<link href="https://azzor4k.github.io/technical/docs_se/JENKINS/" rel="canonical"/>
 <meta content="Tài liệu tự overview lại!" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../images/aZ4k_ico.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.0.4, mkdocs-material-4.4.0" name="generator"/>
-<title>JENKINS - aZ4k Docs</title>
+<title>JENKINS - aZ4k Technical Docs</title>
 <link href="../../assets/stylesheets/application.0284f74d.css" rel="stylesheet"/>
 <script src="../../assets/javascripts/modernizr.74668098.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -69,7 +69,7 @@
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<a class="md-header-nav__button md-logo" href="https://azzor4k.github.io/technical/" title="aZ4k Technical Docs">
 <i class="md-icon"></i>
 </a>
 </div>
@@ -79,7 +79,7 @@
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
 <span class="md-header-nav__topic">
-              aZ4k Docs
+              aZ4k Technical Docs
             </span>
 <span class="md-header-nav__topic">
               
@@ -145,10 +145,10 @@
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title md-nav__title--site" for="__drawer">
-<a class="md-nav__button md-logo" href="https://azzor4k.github.io/docs/" title="aZ4k Docs">
+<a class="md-nav__button md-logo" href="https://azzor4k.github.io/technical/" title="aZ4k Technical Docs">
 <i class="md-icon"></i>
 </a>
-    aZ4k Docs
+    aZ4k Technical Docs
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -335,7 +335,7 @@
 </code></pre></div>
 Kiến trúc servlet?</p>
 </blockquote>
-<p><img alt="GitHub Logo" src="/images/4.1.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/4.1.png"/></p>
 <blockquote>
 <p>Apache tomcat là gì?
 <div class="highlight"><pre><span></span><code>Là một Java servlet được phát triển bởi Apache Software Foundation.
@@ -365,30 +365,30 @@ Java servlet API cho phép nhà ứng dụng thêm những nội dung động v�
 <li>Hệ thống CI sẽ lắng nghe và thực hiện pull code về, build rùi test code.</li>
 <li>Trong trường hợp build, test thất bại, các thành viên trong team sẽ nhận ra các lỗi phát sinh và các developer sẽ chịu trách nhiệm sữa lỗi và đẩy code sữa lổi đó lên repo.</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/5.1.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/5.1.png"/></p>
 <h2 id="vai-tro-cua-jenkins-trong-he-thong-tich-hop-lien-tuc">Vai trò của Jenkins trong hệ thống tích hợp liên tục</h2>
 <p>Là một ứng dụng web application mã nguồn mở đóng vai trò là máy chủ build &amp; test của hệ thống tích hợp liên tục. </p>
-<p><img alt="GitHub Logo" src="/images/5.2.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/5.2.png"/></p>
 <p><code>Jenkins</code> giữ vai trò quan trọng trung tâm là CI server (build &amp; test server) cho mọi hoạt động của hệ thống.</p>
 <ul>
 <li>Nhờ vào việc hỗ trợ đa nền tảng, công nghệ Jenkins giúp khép kín quá trình phát triển phần mềm một cách tự động theo mô hình Agile nói chung và hệ thống tích hợp liên tục nói riêng.</li>
 <li>Với hơn 400 plugin và được phát triển thêm không ngừng <code>Jetkins</code> đã trở thành trợ thủ đắc lực cho hệ thống CI.</li>
 </ul>
-<p><img alt="GitHub Logo" src="/images/5.3.png"/></p>
+<p><img alt="GitHub Logo" src="/technical/images/5.3.png"/></p>
 <p>Nói chung <code>jetkins</code> tất cả với nó hầu như là tự động. =&gt; Giảm thời gian và chi phí.</p>
 <h2 id="tich-hop-project-git-len-jenkins">Tích hợp project Git lên Jenkins</h2>
 <p>Đăng nhập vào Jenkins WebUI theo đường dẫn:
 <div class="highlight"><pre><span></span><code>http://IP-address:8080
 </code></pre></div>
 Chọn <code>new item</code>, Nhập <code>Enter an item name</code> và chọn <code>Freestyle project</code>, như hình sau:
-<img alt="GitHub Logo" src="/images/6.1.png"/></p>
+<img alt="GitHub Logo" src="/technical/images/6.1.png"/></p>
 <p>Chọn <code>Save</code>, tiếp theo trong phần <code>Source Code Management</code> chọn option <code>Git</code> và nhập vào <code>Repository URL</code> của bạn, như hình sau:
-<img alt="GitHub Logo" src="/images/6.2.png"/></p>
+<img alt="GitHub Logo" src="/technical/images/6.2.png"/></p>
 <p>Chọn <code>Save</code> và chọn <code>Build Now</code> bạn sẽ thấy <code>Workspace</code> của Git bạn hiển thị như trong hình:
-<img alt="GitHub Logo" src="/images/6.3.png"/></p>
+<img alt="GitHub Logo" src="/technical/images/6.3.png"/></p>
 <p>Tiến hành tạo <code>log file</code> cho <code>Jenkins</code> khi build như sau:</p>
 <p>Chọn <code>Configue</code>, vào phần <code>Build</code> Chọn <code>Execute shell</code> nhập vào <code>Command</code> như trong hình sau:
-<img alt="GitHub Logo" src="/images/6.4.png"/></p>
+<img alt="GitHub Logo" src="/technical/images/6.4.png"/></p>
 <p>Trong máy cài đặt <code>Jenkins</code> tiến hành tạo file log và nơi lưu trữ như sau:
 <div class="highlight"><pre><span></span><code>$ sudo mkdir /etc/Jenkins_Test
 $ sudo mkdir /etc/Jenkins_Test/Log
@@ -410,9 +410,9 @@ $ sudo chown jenkins.jenkins /etc/Jenkins_Test
 $ sudo chown jenkins.jenkins /etc/Jenkins_Test/Log
 </code></pre></div></p>
 <p>Trên Jenkins WebUI thực hiện lại <code>Build Now</code> và coi phần <code>Console Output</code> đã thực hiện thành công build cũng như tạo file log, như hình sau:
-<img alt="GitHub Logo" src="/images/6.5.png"/></p>
+<img alt="GitHub Logo" src="/technical/images/6.5.png"/></p>
 <p>Trên máy cài đặt <code>Jenkins</code> có file log như hình sau:
-<img alt="GitHub Logo" src="/images/6.6.png"/></p>
+<img alt="GitHub Logo" src="/technical/images/6.6.png"/></p>
 </article>
 </div>
 </div>
